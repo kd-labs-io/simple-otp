@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:40dc2999d6d57e59e43dedca89e93194f97023edfce9ecf0c5762a05029d2470",
+  "claims": [
+    {
+      "id": "claim_5afef7d387404759a190b621fc54ba4d",
+      "statement": "OtpAccount supports totp/hotp, SHA1/SHA256/SHA512, and 6/8 digits; it carries both period and counter, while ParsedOtpAuthUri omits persistence identity id and createdAt. createdAt is milliseconds, whereas generation and TotpCard timestamps are seconds.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/otp/TotpCard.tsx#L21-L24",
+          "version": "repo-lines-v1:sha256:db04ba31c0c38cc9f9fcc695a975a600d60afe87566b73c5500e96d74e4ced54:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTIyNGExOWExMmU2MmY0Mzc4MjE2NWU2MmU3YWQ0MzdkMTQ0NWJlNWUzNmU4Zjg1ODEzZTJhZDU4NjlkOThmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAzNGUzZmVkMzg1NmE4NWJiZjJkNmZhYmI3MDE0YzdhY2RhMTQwOTk1ZjE2YTE5NGM5MGIyNzgzMTVhNjFiOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDc2YzUyZTUxMzA0OWEzZmMyNGQxMzk4NWYwNzBmNWJkZDZlZDA0NWE0ZmQ0OGU0Y2I4YjI4MjVhNjA3ODcwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGU0NDVjY2M2ZDdlYWI3YTRlMDI5MWUxODFiZDhlZjA0YzhiZTI0NDI3NTBiOGNhM2VjOGMyNmI4YzRmMDdkYSJ9"
+        },
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L138-L185",
+          "version": "repo-lines-v1:sha256:eac610e3506acae961530f26066ac2cd4e1a0a47d8c34bcd8a49e27466be509b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2NmUzZTY3OGIwMDNmMWQyNmRkNDFhYjNlZTMxM2M0MjBlYTUzYjFkNDJjMzAwOTlmMTI2NmJiMjYzYjYxNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlMGFiMzUwMDc0MDE3NjlkZmE1YmQ4YTcxNzc5NGM5MzZlNjEwYjViNDI1ZTA4MGVmN2ViYmJhNzc3N2M2ZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU3NzIzNTQzYjkwYjQzYTQ2ZDFkMmJkYTcwMjA1OGM4NTkyMDRjYWViZmZmNTg3ODZkY2MwYWZkNjllOWRmNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        },
+        {
+          "resource": "repo://src/types/otp.ts#L5-L21",
+          "version": "repo-lines-v1:sha256:75ab31b33eb4d9c770f77a034d282bc7027155e998154e7af89afa6897f43f4c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmZDUzYjE1OWQ3NzYxM2E0MmJjZjQ5Y2NlOGQzOWEyZmYyNTc0ZjFhMjA1ZDkyNTBjYzBiMmY3MTc2MjU0ZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3MTAwYTQ5MTM5M2QzYWU3ZTQ5ZjM2MWRlM2FhNTQxMGU4ODlkMDEwMzFlYTczZTEyYjdhN2Y0ZjY2OWZiMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFkNTg5NWVmMTgzZGU0NDcxMzNiYTBlYmZlNTdmNTRkMzNhNTU0NTQzYmNmOWQ5NzM2Y2FlODExODI3YTM0Y2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkMTBhMzY0M2QzNTZiMjgxNGIxNmZlYjBlYjA5OGY2NjZkNjFjZTA2NzlmOGQ2ZGMxYzg1OTQwZmQzYjg5ZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee32319effd54538bb6bec3dac9e614c",
+      "statement": "URI parsing defaults algorithm to SHA1, digits to 6, period to 30, and inactive counter to 0, normalizes algorithm separators and case, and uses parseInt for numeric parameters rather than strict whole-string numeric validation.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L106-L182",
+          "version": "repo-lines-v1:sha256:3ebe82eaa0b07697b1bfaec667a20e1b9105f6bcfe53a8d9ba6a46934def38cf:eyJzZWxlY3RlZExpbmVDb3VudCI6NzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxY2YyZTIwMGVkYTZiNTMzYmM4YjBmYTIwZjFmMDcwYmNiMTVjMjBiMmUxYjc1YjE2OWM4ZTlkMGNlODlkOTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzMGZhZjY3YjQ5M2ExYzg2YjFmOWU1YjI0NjE4MTVkZWU3NDg1NTVlNTQ0NTgwN2E3OGFmY2E2YTg4OTEzNDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a24bfa489004566ba4be29cca5c7d8b",
+      "statement": "Engine account wrappers default falsy digits and algorithms to 6 and SHA1, default missing periods to 30 and nullish HOTP counters to 0; period validation checks finite positivity but not integrality, while counter serialization checks nonnegative finite integer numbers without safe-integer or upper-64-bit bounds.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L138-L185",
+          "version": "repo-lines-v1:sha256:eac610e3506acae961530f26066ac2cd4e1a0a47d8c34bcd8a49e27466be509b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2NmUzZTY3OGIwMDNmMWQyNmRkNDFhYjNlZTMxM2M0MjBlYTUzYjFkNDJjMzAwOTlmMTI2NmJiMjYzYjYxNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlMGFiMzUwMDc0MDE3NjlkZmE1YmQ4YTcxNzc5NGM5MzZlNjEwYjViNDI1ZTA4MGVmN2ViYmJhNzc3N2M2ZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU3NzIzNTQzYjkwYjQzYTQ2ZDFkMmJkYTcwMjA1OGM4NTkyMDRjYWViZmZmNTg3ODZkY2MwYWZkNjllOWRmNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        },
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L27-L65",
+          "version": "repo-lines-v1:sha256:ffabce525683f3b8f5488d66e23c4c474840b26d22ca5bc1f253ffd783e3d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3OGM3Yzc0OTViNzU4NzA2NWYxMWMwYjY1OTNlOWQ4MmI0OWUzY2JiMjFjZDRmNTdlNzVhMzcyMWFlNTI2MWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MjFkZmI3NTc4YjNkODllOTcxOTgyNWU0MDNjNGYxYTE1M2JkZmZlMjRiNzI4ZDA4MjcxYzU3ZjFhNGYwZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3ZmQwYzNkMGNmYTExNzQ0OTAwZDk3OTVjODVkNWE0ZGUzZmRjMDQ5NTJiZGM4Y2QwMTY5MjU3OTkyMWY5NjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f3c91a52e752412982131cd7024a7a99",
+      "statement": "The crypto Base32 module re-exports the OTP codec; sanitization removes whitespace, hyphens, underscores and dots and uppercases, while successful validation returns unpadded uppercase data after checking alphabet, padding, structural length and zero residual bits.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/base32.ts",
+          "version": "repo-file-v1:sha256:26189730c675afc5359065d84cb1d733c352946dd04309b3c9090c1497f582ba"
+        },
+        {
+          "resource": "repo://src/services/otp/base32.ts#L39-L148",
+          "version": "repo-lines-v1:sha256:a37b3adeee31c78e2dc292ac705f8d047902db0e8b54f81a06634955b757e017:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlMTkyODIxNGM0MjJlMDAyYWUwOTIwMjFjMWY2ZmQ5MjNkMmNlZWYxYTRmMzlmYWZmNTY0OWExMzEyYWM1Y2M1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4NThkZTdhOTdmMzM5YjI2NzEyNTQwN2FkNmVkYzQ4OTA5ZDQ2NGRkOTdkZjJmMzc5YWYyMWQ1NGViODY4NDMyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmMDYwOTI0NDM3ZjQwNmNjYWY4ZDZjMmZlZDM3YTYxNTA2MjZhM2UzYWQ3ZGZjMTkzNzI1YjljMmU1ZmJjMjgzIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5b37c52b22d4ea4ae29b85ee8947f42",
+      "statement": "Base32 decoding defaults to strict residual-bit validation, allows empty sanitized input as empty bytes, and strict:false relaxes only residual bits; encoding defaults to canonical padded uppercase output.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/otp/base32.ts#L158-L289",
+          "version": "repo-lines-v1:sha256:d32057aec863f9473c189cf63716a13c0f382986d1c2687efd771f6bc5c002c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4NTczYjA5OTdjZWIwYTBhZTM2YzVhMTdkMTIzN2I3NzEyYjdhYzQ5MTBmOTc4NDk4YmRiOTUwODM1NmJlY2Q0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0NWJlOGYzOTY4Mjc0YjIzNzgwN2RjNDIwODc0MDZmOGJiY2UzMGQ4MjdmZTRmYzVmMmMwMjE3ZWUyNzNlOGVkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2d583c76b844aef88a4ca7d5ea1f172",
+      "statement": "URI validation rejects empty sanitized secrets, but account generation only rejects empty trimmed strings before decoding and raw generators do not enforce nonempty keys; these checks do not enforce a secret-strength minimum length.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L101-L153",
+          "version": "repo-lines-v1:sha256:6b4ee56b1f1dd1b2bf4b678c4caf45fd97e438de763a1d54d72fd34423c92ccf:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZWMyNDI1Y2MwZDVkMWRlMGYwMGE4ZWRiNmM0ODZmZDk3MDY5ZWQyZjkwYTk0ZDVkYzI3YWQ0Nzk3YzNlZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwODVlNWRhN2QxYTM3ZDAwN2U2ZDA2ZTBkZjM4NmVhMmNhZGMyNzhmNjE0MzU5YjhjMzUxMTA1ZTI0MzNjZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzODA1ODgyNzJkOTBiYTk2N2VmMjZlZGQyOWJlMTcyNmJhMzVjZjNkYTE1NGY3ODM0YzFhMmVlM2Y4ZGYwZTgifQ"
+        },
+        {
+          "resource": "repo://src/services/otp/base32.ts#L53-L61",
+          "version": "repo-lines-v1:sha256:1581b70149dd049e7571aa1b5545ba1abf71fb1026a42e2a155792c8e80065be:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGNmNzgxYjM4MzU4NjIzOTY3MjRjNGQ4NjNlMjA5ZjQwZDg3YTRlNTNmM2RlOGQxNGZmNTdiNDA4NGM3NDQzZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWM3ZWZmY2NlYTlmY2JkMDIwODU0MmQ4OTA3NDQ5MjUwNWIwNjA2NDUyYTY5MmE5MmI4ZmM2NGFiMWM3NTg5ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjE0NDBlZWQ5MmY3NTJkZDEwNzZlYmQ0NWMzN2I2MjI0MDAxMzQwNzBhYjJjOGNiY2JkMjZjY2M5NTJhY2VmZCJ9"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L94-L104",
+          "version": "repo-lines-v1:sha256:ebd6c5969f0f0c895c5116f4ffa60e660cb872399b226746c7c3389a8ff96ea2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3ZTQ4YTc1ZGZlYTNhZTVjMDFkODAxMGI2MjMyZDE5ZGYxMmMyMTE1NjFmZmMzZDYwY2RiMjUyMWIwZjA2YWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjZjEyNzVlZmM5ZGRmZTY4NGJkZmU3NDk1NWY1ZjM4YTc0NjUxYThhYjA4NTYyMGRjZjViOTk0YTE5NzlhMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZkMWQ2ZTM1NGFjZTZjNjYxNzkyYzQ3MmMwMzkxZGQyYzYwOWExMjQ0ZGE4OTZjM2Q4MzM0ZWE2ZmNlMTg5MmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2ZmIzNzhhMDg0Y2E2MWZlZGJmYTYyMWVmNDFmMWIzMTFiNDBhMzNjZTQyMTk4OWU5Njg3NTAwNzE4NjhlOTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5c5db80fbbe0452b8f8329eeab128b86",
+      "statement": "The URI parser requires otpauth totp/hotp, nonempty account and valid secret, ignores unknown parameters, falls back to raw labels on decode failure, and prefixes parser errors with URI_PARSE_ERROR.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/uriParser.test.ts#L221-L243",
+          "version": "repo-lines-v1:sha256:16a52e08dfdb68d60f77a7b9db179427a282d98f03a5e8444ee6c478c497a965:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkNmJjNzc4YzhhZDQ1ODA3NjJhOGQyNDNiMWFjNTRlYzdhYzFkMTYyNzU5YzI1ZWNkZGU5MjhjOGM0YjhhNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxNjQ4YmMyYWEyODlkNmM2YzcwZmQ2ZjIxMmY1OGQwMDU5YmYzMjUzMWU0YTQ1M2RlNzc2NjMyOTZmZDE1MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiYTM1ZjFkMzkwN2RhNmExYTUxNDYxOGE3YzUwMTk0MjRlMjY5YmVhNmYzNjk3MDUwOGFkMDNmMjFkMzFkMWQifQ"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L31-L104",
+          "version": "repo-lines-v1:sha256:93a2b421dd4669097b8e90f07e41494bf820d59cf6f90f7a59a8d7f7abbe83b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyYmQ1NGUxMDI0NTk3ZTg5NjkwYjM1YmM4NDgyNmEyZTM5MWRiMDRlYTdhODVkNWUwMmU2NWVhYTk5MmYxNDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjZjEyNzVlZmM5ZGRmZTY4NGJkZmU3NDk1NWY1ZjM4YTc0NjUxYThhYjA4NTYyMGRjZjViOTk0YTE5NzlhMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlNzgzOWQyNDRlMDllMzQ5MGIxNWIyZDRjNTM5ZmNiZDA3NGNmYmZlZTc0ZWQzOGNkOTM5ZDcxMDIyYWQ3M2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2ZmIzNzhhMDg0Y2E2MWZlZGJmYTYyMWVmNDFmMWIzMTFiNDBhMzNjZTQyMTk4OWU5Njg3NTAwNzE4NjhlOTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae59281971e9440b875d21efb73aef6f",
+      "statement": "Nonempty query issuer overrides label issuer; matching query-issuer prefixes are removed case-insensitively, otherwise the first colon divides issuer from account and subsequent colons remain in the account.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/uriParser.test.ts#L42-L113",
+          "version": "repo-lines-v1:sha256:8f310aebcc5530dbf8a6dd983f534c5a4ad4711a3033d57a989930550ab11beb:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNmNkYmExNmY2YmU0MGU4NTlhMjEwZTk1ZGRjYTZmZTM3YWFkOThkZWYzYzBmYjNjMTMyNDRmM2YyZDJhOTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxNjQ4YmMyYWEyODlkNmM2YzcwZmQ2ZjIxMmY1OGQwMDU5YmYzMjUzMWU0YTQ1M2RlNzc2NjMyOTZmZDE1MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzOGRhOTZlYjk4MGU5NWQyNmM0ODljM2ExMDYxNDY2ZmI0MWY1OTMzMjYyYzlmZWI0Zjg1ZjI2NDU2NmMwN2IifQ"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L55-L92",
+          "version": "repo-lines-v1:sha256:e8812be1f857f0d6e9e2b379c84bfe2389634dbb04252c67774fd34a5812ee52:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyMWNkNDU0ZWM4ZWNlOGU0MmEyMDA3ZmYzMGY1ZGVlMjFjOGQ3NThiZjlmYTJkZmRmMzI1MjAzYWUwMmIyZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4OTEwY2U5ODhjZmRmNjU1NGM1MDhiNTRlNjdiYmM5NDVjM2MyYTZiYWZjYWU2MjM2YTc0NDk5MDgyNWFiYmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmN2QzZjBhNjA3YTdhN2UyMTlkOTE3MjRmM2VlZDEyYTFhM2E0ZDk4MTg2ZTFlM2I2NTczMzRhMTQwZmNiZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMGE1MmMwNDNjNjFmZGRmOWExNTEzZDA0NGUyODc5YTJlZjBmODExMWM5ZDM4YmE1ZThiZGYxNjI2YjYwYjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_31c2f46e376d411b8c8dd9bbfa66530d",
+      "statement": "TOTP URI parsing rejects presence of counter, HOTP rejects presence of period and requires a nonblank nonnegative parsed counter; configurations retain both moving-factor fields with inactive defaults.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L130-L182",
+          "version": "repo-lines-v1:sha256:f11f2bb3c9953fec7ede7c455877f86ef4b7cdff6003789fb19200daa63c4bb8:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmNjQ3OGE3NmFiOGZmOTk5MjJhOTM1ZDEwZTBlOWEwOTMzMTQ5NzYzMTI1NDdhZDk5MWFjNzBhNmM1Y2UzOGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_28e2d91c14024b0caea64184d3a84956",
+      "statement": "URI generation encodes issuer and account, repeats issuer in query, omits default algorithm/digits/TOTP period and always writes HOTP counter; it validates only type and nonblank account/secret, and its secret sanitizer removes padding but not dots.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L191-L243",
+          "version": "repo-lines-v1:sha256:a53589fd8cbda9525d293daae4e1b3c376fea00473ccea28946ad7188708ca6d:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzMjg5YTI1NzlkZWI1NDMyMGM0MGQ5ZTkyZjkyNDZiZmYxMmQ4NTcyZjc5YjNjYmUyY2M5ZjA2MGM0YTIyN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhYjFhZDhlMmNhNWFmMWE3NTk5NGUyNzVkYmNmMjIyYmFmNWQ4ODMwZmMyMTUwOTE5NmJhNjU4ZjI1ZDY4OGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_092282ca323341bcb720e7ae5dcbcf2b",
+      "statement": "URI round trips preserve tested normalized token configurations, not original URI bytes, metadata, unknown parameters or inactive moving factors; issuerless account labels containing colons can be reinterpreted as issuer prefixes.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/uriParser.test.ts#L329-L392",
+          "version": "repo-lines-v1:sha256:5ba2af7617637341f6e18df79df7e5b0b385af83e103767a376319dc575ad37e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyZmY5ZjliODRhOGY3MDUyM2VmYWVkMzZiOWVlYjc3ODFmMDdkNjY3N2E5NmEwNDIwNGM2YTYwZjdmYjk1NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxNjQ4YmMyYWEyODlkNmM2YzcwZmQ2ZjIxMmY1OGQwMDU5YmYzMjUzMWU0YTQ1M2RlNzc2NjMyOTZmZDE1MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L173-L243",
+          "version": "repo-lines-v1:sha256:494bb80ddb6dade6be7d7af82aa68721a07821769b9c37ea54e853aef6aa95b0:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5NWZhMGYxMTE3YjVlYTQwNDM0MTQwZGRlMWEzNDBjNzIwZGRiZjMyNjIxMmUxOTE4MzhkNGIxNTZkMzE2YmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L55-L92",
+          "version": "repo-lines-v1:sha256:e8812be1f857f0d6e9e2b379c84bfe2389634dbb04252c67774fd34a5812ee52:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyMWNkNDU0ZWM4ZWNlOGU0MmEyMDA3ZmYzMGY1ZGVlMjFjOGQ3NThiZjlmYTJkZmRmMzI1MjAzYWUwMmIyZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4OTEwY2U5ODhjZmRmNjU1NGM1MDhiNTRlNjdiYmM5NDVjM2MyYTZiYWZjYWU2MjM2YTc0NDk5MDgyNWFiYmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmN2QzZjBhNjA3YTdhN2UyMTlkOTE3MjRmM2VlZDEyYTFhM2E0ZDk4MTg2ZTFlM2I2NTczMzRhMTQwZmNiZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMGE1MmMwNDNjNjFmZGRmOWExNTEzZDA0NGUyODc5YTJlZjBmODExMWM5ZDM4YmE1ZThiZGYxNjI2YjYwYjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4fb06fd4ca884583ac70b5012ecfacb8",
+      "statement": "TOTP computes floor(timestampSeconds/period) with epoch origin zero and delegates to shared HOTP, which HMACs secret bytes and an eight-byte big-endian counter, dynamically truncates using the last digest byte's low nibble to a 31-bit value, and formats modulo 10**digits with zero padding without advancing state.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L55-L185",
+          "version": "repo-lines-v1:sha256:3b3e09c035d787ecc7bbf93a0282a8d5beeb684c70869fbb9ad7f88c613610b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3MzZhOTM5YTZhYTgzODQ4NjNkNzNjMTE4MTNmYTlhNzgyNTFlM2I1MDVkODlkNTk1ZWUwMjRmZWM5NWJhZDQ5IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2ZTBhYjM1MDA3NDAxNzY5ZGZhNWJkOGE3MTc3OTRjOTM2ZTYxMGI1YjQyNWUwODBlZjdlYmJiYTc3NzdjNmZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJkZjAyZTQ3OWRiZGFlMjk0Y2ZkZmU3NTkwMTI3Yjc4ODZmZDI1NjliMWNiZDQ5OWNiYThmMzBhOGExNmFkNmM0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzNzkyOWU5MWUwZjk5YzNlODI1ZGU2OWI0MzVmYjY0ODRkMWIwYTFkZjJmNDY1NjFhYmYxYTI5ZjA0MTg4Yjg4In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_d45ef1c68b7445029e3ca5fb8b5e2129",
+      "statement": "TOTP progress uses floored seconds for remaining time and fractional timestamps for clamped progress, marks urgency at <=5 seconds and resets to a full period at boundaries; it validates period but not timestamp independently.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/rfc6238.test.ts#L106-L161",
+          "version": "repo-lines-v1:sha256:fb6b436698f5dc6b42f4c6b9ea216f1404d781c4fad69e9d74b09da0c6905b98:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0Y2JjOWFiM2FlZjlmMDUyNjY0ZDE1MjA2NGYyMTAzOGJjODQ1YjBmODExZTQxM2Q3N2ZmNzA5NWM5OTUzNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxNjQ4YmMyYWEyODlkNmM2YzcwZmQ2ZjIxMmY1OGQwMDU5YmYzMjUzMWU0YTQ1M2RlNzc2NjMyOTZmZDE1MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0MDhjOGMzYjQ4Njk2Mzk3NTExMmZlYWFjZGJiMmQ5NjFmZGI1ODRhZGJhYTlkZDM4NWUzMzBkNzg2OWU1MTAifQ"
+        },
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L193-L218",
+          "version": "repo-lines-v1:sha256:6de9a36c512b4691bbddc1a5b455222ae5beb643e92af65678abe8f9330255c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzYjM4MDI1NjdmMmEzYjRiM2RiZTgwYzdmZDgxZTNhZWJkNDBmMDEwZGM2MzQ0YWNkN2UwMzA3MjRlYmMzY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExYTM4ZjM3N2M1NGU5NjIwNDgyZGI5YzRlYTE5MGM3NGJjOGNkODlkMDE2ODk0OTMwODQ3ZDU0ZWFmYmU2YzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3ZDg0NjI0ZjkwYzliOWZmMWU1YzA0OWFlMTc0YjY5MzZiNzc3NzdlNzU5MWU2MjdlYzZmNGQ0ZGE2ZTQ3NmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c522189b623b40478034d4571ba1d4eb",
+      "statement": "verifyTotp searches inclusive drift offsets with default window 1, skips negative steps and returns the first delta match; verifyHotp searches an inclusive forward window defaulting to 10 and returns matchedCounter; neither mutates accounts or records consumption.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L239-L289",
+          "version": "repo-lines-v1:sha256:ceb1907ee607e4dc03c0a605e2e8d745579a9f26533b1eb8561c6e6c56305122:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhZmM5MjhiYWZiZmI4ZTI5ZmNmYTJhZjEyMjYwZTg0ODMzNGZjYzk4NTZmZmZiZjg3ZmY5ZDg5YTFjYWU3ZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhYzFiMDhiYWNmYzEwNjM1NmY2NTdiNTBmMzkwYzQ5NjI1MmFhYzk1NzJlN2YxNTg4MDAwYWQxN2MwMmFjNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4MWU2YjY0Mjk0NjAyMzU5MWM3MzAyNjcyYmY2MjcwNWI0MmQ2YTAxYWU4MTUzMjFmZmYzZTFkOGZhNWEyYTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f32e239040a460c9c941577df7a907f",
+      "statement": "Verification compares exact untrimmed strings with early unequal-length rejection, has no explicit window bounds or integer validation, and can throw on malformed configurations; the helpers contain no replay ledger or rate limiting and do not guarantee constant latency for full verification.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L223-L289",
+          "version": "repo-lines-v1:sha256:0014162cef9c784a8819fea5eb503705408e1487ab4fc4175af186106d3011ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxY2JlZjhmN2ZhMTNhZTkyYzY1MWZhY2RkZWU1OTdmY2FkNDI0ODQxZGE0ZDIxYjAyMjIxYzZlNTZkZWQ3MjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1NjhiNDZkMjRhYzgxNTY2YmY4YjYwMDU0MmRmMzVjODhiNDdmZWVjNDk3ZDlhNjE2M2VjMGFiYmI1YmJiMzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4MWU2YjY0Mjk0NjAyMzU5MWM3MzAyNjcyYmY2MjcwNWI0MmQ2YTAxYWU4MTUzMjFmZmYzZTFkOGZhNWEyYTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_346a2dd4b849489aa9bab65f52f0becb",
+      "statement": "Both OTP cards catch generation errors as ------, prevent copying invalid/empty codes, group valid display codes 3+3 or 4+4 and copy the unspaced string; TOTP progress failure separately falls back to 30 seconds, progress 1 and nonurgent.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/otp/HotpCard.tsx#L59-L108",
+          "version": "repo-lines-v1:sha256:3865f81ca1fe28f2be6a5e58bfb7de949a2c4ab847ee006fcddc983fbc153d2e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjM5ZDI2ZDg3NTFkMzBmZjRjY2VhYWVlNmJmMzE1NjE1ZGNiMmM2NDliMWY3NTEwYjZlOTk1ZTgzODE4MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNzNiZjM0MDdiNDM4ZDBkOTA5NjRjMjcwNzNlNTAwZWQxYzA5YTZiZjM5ZTdiOTJiNDJlNTU3MmYwZWU0NDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0YzFjNjc3MmRiNWY0ODViNDVmYzVjYTE1ZTkyOTk4N2E4MDFmZTJjOTNiNzExNmNkODRhZTI5MWJhMjZmNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxM2RiOTQzOWM3YjUyMzg4OTQ3NjBkYWU5Yjg4NWIwNDYzYjNjYjg2MGJmODU2ZmVjNWMxNjgzYTE5NTUxMTUifQ"
+        },
+        {
+          "resource": "repo://src/components/otp/TotpCard.tsx#L58-L101",
+          "version": "repo-lines-v1:sha256:d8ef1214574eda1769f339a62ec9ffcfdcb605dc208001b9d7b341a2ead0555a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZTVjYzNlMGJjNDAwMTYwODRkODg2ZGQxN2ZiYWMwYjA5Zjc2MGU2YTk3ZWE0ZTJkOTZjNGM5MWNmZDczZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNzNiZjM0MDdiNDM4ZDBkOTA5NjRjMjcwNzNlNTAwZWQxYzA5YTZiZjM5ZTdiOTJiNDJlNTU3MmYwZWU0NDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0YzFjNjc3MmRiNWY0ODViNDVmYzVjYTE1ZTkyOTk4N2E4MDFmZTJjOTNiNzExNmNkODRhZTI5MWJhMjZmNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxM2RiOTQzOWM3YjUyMzg4OTQ3NjBkYWU5Yjg4NWIwNDYzYjNjYjg2MGJmODU2ZmVjNWMxNjgzYTE5NTUxMTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc04a9f79e194dc099203dae53f70c63",
+      "statement": "HOTP card copy does not increment and increment delegates to an awaited callback with busy guarding; the pure engine increment copies account state without persistence/type checks, while storage queues updates, requires an existing HOTP account and persists after generating the next code, then useVault reloads accounts.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/otp/HotpCard.tsx#L77-L108",
+          "version": "repo-lines-v1:sha256:d88cea81e3c7f1a4a6079a55b655d606accf460bfcb48e83771bc8fb8e040ce1:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZWVmNTlmNTYzOTBlNjNlZjlhYmZjYmEyMzJlMTY2NzYxZmIyZTUzMTdlMzkwODM3MDQwYTNiNmJkMmM3MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNzNiZjM0MDdiNDM4ZDBkOTA5NjRjMjcwNzNlNTAwZWQxYzA5YTZiZjM5ZTdiOTJiNDJlNTU3MmYwZWU0NDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NjJiYjMwMTExZTIwNmFiNjM0ZjAyMzEwNzNjMzA2MWNlZTJlMTIwMzgwZjM2NDcxMTYzMzk4MzY5NjQ4NzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxM2RiOTQzOWM3YjUyMzg4OTQ3NjBkYWU5Yjg4NWIwNDYzYjNjYjg2MGJmODU2ZmVjNWMxNjgzYTE5NTUxMTUifQ"
+        },
+        {
+          "resource": "repo://src/hooks/useVault.ts#L145-L150",
+          "version": "repo-lines-v1:sha256:853ab6247459b710351c27a3a0dd04dd3570b43a3d13dd102fa5fe2761cd8d3e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFlOTZlNWJiNmU4ZjU1NjQyYWE0NmQxY2NhZTYwOTljNmU5ZGI0Njc4ZTczMGEzOTM1ZTNkMmMwZWRjMWJhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRjNTJmMDhiMzliMDhiMDFjOGQzMDhiZjg4MGIwYmVmMDJmZDFkZmNjOWQ5YWE5M2E0ZDFiNWY0ZDU4YjZjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmI5YzQ4NTEzNmRkNGJkZjY4MjA2Y2YzZmM3YmI3NjMwYjBhZWQxYjU0OTc5YjUzMDQ3Y2U1NzZkNGMwMDRiNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmEzYTA3ODQ2YjY5ZDNlYzRmNWMzMDIzMmIxZGVjZTE5Y2NjMjg0ZDc4MDM0MTA0NTFmYjJhNWU4MDU2ZjQ4MCJ9"
+        },
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L294-L305",
+          "version": "repo-lines-v1:sha256:03c6fc2f19668c1054f8f810e1984d747906abc9a18dfaba598d4024b8e65d5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhODgxMmQ4MTlkNWY5MThjODcwNjBkYzYwZGQ2ZGNhMjJkYjhkNWJiOWY3OWU3MDJhYWIwMzNlZDg3NDFmYWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkYWRjOGM1MWIzMGNkMjMwMjEyYjg0MTZlMmExZDJkOTY1ZjI0NGEzZmE0M2IwNGEzNmMwMzJhNjgyNmE3M2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L210-L228",
+          "version": "repo-lines-v1:sha256:ccc496c22bc9b9138225c71d0d4dd24a8926fe70337ed0615b9fdd680c879157:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiNmI0N2QyN2Q3ZjkyMGQzYjlkZjg3YjI0ZDcyZTgzNTlmMzBlYzFkNWQzMmY5NDg1OWFlMWJkMWU5MTQxNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwNzJmZTJlNDRjNTUyNmMwNTE2NDU4N2M5MTlmYTM2YzRhY2EyNDBiY2UxOGI1NWJlNTVjYWYzZmNiYzczMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8db00257edc04e4e8bf83a63eb74cd88",
+      "statement": "RFC 4226 tests check counters 0–9, intermediate truncation, eight-digit formatting, forward verification, increments and counters beyond 32 bits; RFC 6238 tests cover Appendix B for all three hashes, derived six-digit leading zeros, custom periods, progress boundaries and drift verification.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/rfc4226.test.ts",
+          "version": "repo-file-v1:sha256:84cf18ffd02b5a490970b75838ed8a36a9b80646ab5514316267f9a0bfb26491"
+        },
+        {
+          "resource": "repo://__tests__/unit/rfc6238.test.ts",
+          "version": "repo-file-v1:sha256:0720ef9f630476d9538a0a1f38b0c2349b13a06f9d2083a58eccd5ea04a9078b"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-10T07:14:35.895Z"
+  }
+}

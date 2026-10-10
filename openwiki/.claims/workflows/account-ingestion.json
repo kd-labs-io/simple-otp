@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c5229c4867db38f090e6dbac0842ce5ba5992021ad50effcfa701d5bb2c82881",
+  "claims": [
+    {
+      "id": "claim_65477a6043044623aad35201e9c180a3",
+      "statement": "The dashboard bypasses routeIngestion: it constructs camera/gallery/clipboard-URI accounts itself using findDuplicateAccount, while ManualEntryModal constructs manual accounts and the dashboard saves them through useVault.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L118-L276",
+          "version": "repo-lines-v1:sha256:df25dfe5954765b977a412aee6846b3863be9e55e4bccf76d5180b502fbc1c35:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4MjJiNGFkYmM3ZjI3NDdhMzdmMWIxZGJlMGIwZTM0MzZmNDQ4ZmQ2MGFlM2I5YTcxYzQzMDgzNWQ4NDBjNzM1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzYTYyZTQxODQ2MTQ5ZWYwZWE4ZDcyODZlYzQ5YjljMjY5OGNlMmQ1MDRiZjcyOWQwYzE2ZmY2ZDVmMWNlOGRkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzZTUzZTkyMTg1ZDMxNzk1ODc5MDEzM2FkYjdjM2IyOGE0YmRjOWQ3NDM4NDY0ZGM5ZThmODNjODY4Mzk4ZTcxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiYzdiNThjMTk3MTFiNDZlMmQ5ODY1ZGUyOTgzNDlhMzNhNDgwMzJkZGJkZjU0M2E1NGI4NThjNDE2MDg0ZjI1In0"
+        },
+        {
+          "resource": "repo://src/components/ingestion/ManualEntryModal.tsx#L115-L162",
+          "version": "repo-lines-v1:sha256:817678f4129f86775a330865736e7b7932332b73cd472ce5dbecf3e533d4655f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmYjM5YTE3ZGE1Yjg1N2VhZjNkODhhYTRjZDE3ZTY4MGI2ODVjM2NkOWY5NGZiZjRmNDAwZmFlMDEyZGE2OTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0Njg5MTU5ZTQ4YzA0NTIzNGYxNjE3MmE3OTFlYzU3YmE4NzM1Yjk1NTQ1YTRlNDE1NmFhMDgyZGYwOWVmZDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_15e231ec56314fe78a7c4cec57157a81",
+      "statement": "CameraScannerModal gates the preview on camera permission, offers request or system settings depending on canAskAgain, uses a back QR-only camera, resets lock and torch on opening, and closes before switching to gallery.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/ingestion/CameraScannerModal.tsx#L40-L195",
+          "version": "repo-lines-v1:sha256:740557f23be3659f52fd6e306a546750e15424fc57a42702da6d530d3e26f3e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3YjRhYWYxNDhjYWE0Mzk2MWYwNWI1MGY0N2M1Yzk0M2I5NWU3NjExZTFlNDU2Y2ZhYTc0OTYwNzVjZjQ2MTY4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5YmEyMGJhOGJkOWM2NGRhZGI4OGYzOThiODIyMDIzNjE2ZGJjOWZkZThlZTdjZmM0YWNmNmE4M2JkNzAxZTM1IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1M2Q2YzQyYzI5ZjFmMjdjODFjZjAwNTVkNDU2MTI0MmViMWM4NjQzODgyY2JhZmUzNDgzOGRiNTQ0NjQ4YmFhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIxYmYyZTZkYzVjNDRlN2VkMjk4OTZlMDUxYTgzMTI0YWRiNjA0YWJjNjc2Y2YxY2QwOTRkM2IyNGVkYzM5ZjQwIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_40dd58078e4942d599d9ad49d73abf35",
+      "statement": "Camera barcode handling synchronously acquires a ref-owned lock before parsing; repeated frames are rejected, empty or invalid frames enter a 1500 ms default cooldown, and successful parsing retains the lock until reset.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/ingestion/CameraScannerModal.tsx#L40-L68",
+          "version": "repo-lines-v1:sha256:e9773be905de8863577297b7a32433078ec4906416d404420e463c775b925d3b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNGFhZjE0OGNhYTQzOTYxZjA1YjUwZjQ3YzVjOTQzYjk1ZTc2MTFlMWU0NTZjZmFhNzQ5NjA3NWNmNDYxNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxN2FmMTEwMWM5N2I3YzJmNTI1NDA3ODJlNjM0Y2M0NDQwZjBlOTcwMzQxZTUyZjk3NTIzMTFkNzhiN2Q3ZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzZDZjNDJjMjlmMWYyN2M4MWNmMDA1NWQ0NTYxMjQyZWIxYzg2NDM4ODJjYmFmZTM0ODM4ZGI1NDQ2NDhiYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyNDg0ZDk4NTFjYmRmMmQ2MTZkN2I1YmE1MjBkOTQyOTQwZGJlZGUyZmJmNzU5OTlmNjdlOTI3ODdhM2NmMzQifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L69-L212",
+          "version": "repo-lines-v1:sha256:c4a693280ddcae718531d79d896a9efa834440cff86353732cd918228ae04794:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYzY5YmFkOGNkNjA2OWE0ZmUxMmMyNzQwMDUzZmY3N2E1MmI4ZTZjZGFhMTc4OWYzZGQ4YmRhMGM2MTY2YThlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJkM2IyMDk3MjVkMmJiZTJiMmNhMDNjZmMwZjRmM2YyNmFlNTQwYWZiZjYxZjEyNGFlYmM5ZmMzOWFiMzBhZDcwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4NTNmNzUzMDQxZDEwZDI2YTAxZDE1ODNlZDEyMzFlN2FkMDdiMzIzMjljZDA0ZGQ1Y2M4N2Q1OTk3YjIxZTU4In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_83e5caf38f514a909c2587ac6480d761",
+      "statement": "Gallery ingestion uses an image-only picker without editing or network download, decodes only the first asset locally using scanFromURLAsync, and allows injection of QrDecoderEngine.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L214-L271",
+          "version": "repo-lines-v1:sha256:3e0e478a5f632a145e433177a6fa5c8843ca9d90a1fcecac0faf61577838d035:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkODdiYzFlYWQxNGRiMGQzMDc2NDI5NmUxMTE2YjhjMzI0OTA3YTg3Yzk3MmQwY2YwNWYxZmQwNTg4MGEwM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmZjFhMWNhMzVlYjRhMjk3YTFhM2NjYWNhZTFkYWI4YjRlOGIwMGRmZTBmNzY2OWEzODhjMjFhYzNmZDI3YTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiNTgwZTk2NGY4M2E0NzNmNDNkNDQzODQ2Mjk0OWQ2OGI1NjAwZmRhNzg3ZjE2Mzc0NWQwMGRlODljYmYzNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmMTMxNmRjOGVhNmY2MmI2MTc4NjM4ZTI5ZmY0ZWU3OGY2Zjg2N2MwZDgyMmUyNWU2YmQzNWU1NWMyYzQ1MjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a54cf0f8124e4b6686e7e923bf144506",
+      "statement": "Gallery cancellation or missing assets returns canceled; no QR, wrong scheme and parse errors return error outcomes, while picker and native decoder failures throw typed ScannerError; only the first scheme-matching QR candidate is parsed.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L157-L208",
+          "version": "repo-lines-v1:sha256:bb86fefbc641a1365e26d8a1a0da9613bb42b6fbc571894b179c59c34e2f2b7c:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMmFmNGU3MzBkMmFmMjFlMDVhNzUwNDMyNjViODY5MjlmMmZlM2Q4YzA2OWNmYzU1ZGMxZDBhNjVjMWQxOGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3NTFhODE0NzQ3ODM5NWE1OGExNGFkNTEwZGU2MGZjYzQyOGQ5Nzc4NTM0M2YzZDViMzhlYjdhZDhjZThlZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5N2VjOTI3ZGIyMjQ1YmVlMGU3M2RmYTcwMzJiYWJkMjNmYjliMDY1Nzg3ZjE1ZDlkMTE4MTJkNWE3NWRmYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkMzhiNDE2ZDdjYzNjMzg5ZTIzNWM4ZTJjNmE0N2IxY2M2YzgyN2U2YjYzZjEzZDIzMDY5NTA1YWI0YTQzM2MifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L214-L325",
+          "version": "repo-lines-v1:sha256:ba14564fd3136bdb9f5d9757925b9460e4d7a60a5f585e9f697d9de79b87390e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhZDg3YmMxZWFkMTRkYjBkMzA3NjQyOTZlMTExNmI4YzMyNDkwN2E4N2M5NzJkMGNmMDVmMWZkMDU4ODBhMDNhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmYjU4MGU5NjRmODNhNDczZjQzZDQ0Mzg0NjI5NDlkNjhiNTYwMGZkYTc4N2YxNjM3NDVkMDBkZTg5Y2JmMzZhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzZTE4OTJkN2QxODg3NWY5ODhmNjFiYjkxMTE5OGI5ODJiYjRjMDlhNjNhMjkzYmQ3ZjRmODk2OWFmNTUwZWVmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_0d17c144984d4f17b62ae2cd8b0d3ce8",
+      "statement": "Media-library permission helpers are exposed but pickAndScanGalleryQr launches the picker without explicitly calling them.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L239-L361",
+          "version": "repo-lines-v1:sha256:54b86c2c506a12255ea93ca7426c30e983041049ac31c0d062327edae29f71a5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI0ZThiZDc3ZjMwNGU3ODY0ZGQzMDkwZjM4ZmZmODNiNWVjOGNkZWY1OTc1M2IyNjM4ZmFhMDBkYmI2ODE4MWIzIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwYjc2OGU5NTMzNzcyNTI1OTExYjg2MTY0MmVlYWVkNDFhYWRjZmRjNTU1YmQyZTkxZGVhNjZiZDM2YmI4YzMyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_1262963d1a714a03b1562c88a1aa03a5",
+      "statement": "Clipboard analysis recognizes validated OTP URIs or sanitized Base32 secrets of at least 16 characters, rejects PEM/key/certificate-looking text, and collapses malformed URIs to no detection.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/clipboard.ts#L60-L118",
+          "version": "repo-lines-v1:sha256:69bde80dbbd7b82428e78c7b6597342c249404baf599fbad8f31fcd6de33d118:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwYWIzNTdmMTIxMDAxYjYzYTBkM2Y2ZTkyZGUzMjRjOTY1MzY1YTlkMzljN2JkYmFmNTc2MTEzODMzYTBiYzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhNzIzMDc3YjlkYzhmNmM1OTkzMTI0ZTFiODAzMjgxZmY0MmUxZThkZTUxODk4MDE5MTE0NDJmOWZmZDUwMWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlMjQ1YWQxMzFiN2E1OWMwNjEyM2UzOWY1NTY0NzVjOGY1ZDhkMzdiOTJkZjBmZjY3YzNmMzZiNDczYWE4NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_433e5c89b0e14d16bdc65670e10d1ed0",
+      "statement": "checkClipboard caches trimmed text before analysis and suppresses repeated content unless force is true; empty/non-string data and read or permission exceptions return no detection.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/clipboard.ts#L127-L157",
+          "version": "repo-lines-v1:sha256:1227a119d8ab494fd4d8d6494dcef726e7f68e42f9f2c5b3dddb6e1656633649:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2MTcyZjg3MDMzZGViNmIzMjYyZDc3MWY5MmNmMTZjNjBiZjQxZWU1NjM1YWZkMTcwNWY1M2MwNDc2OGQwYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1MjgxZTJiNGQ5ODBkMmNlYWY2MTI1ZjU2Y2Q2NDNmOTQwNmU3MmJkZjNlNjA4YTIwNDAyYjIwNzc0NzczYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmYmUxYmJhZjMxMjEzNGQ5NzVmMDRhZDE5N2NlOTM1YWZkMGI3YTYxMGUzYTAzNjgyYjE2YTE2Y2E3YjMwNjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_20ad5a5d02794f9aa2bbea3a677e5bd1",
+      "statement": "Dashboard clipboard intake uses force true; URI detections can save after duplicate checking, but raw secrets only prefill manual entry and require user submission; the modal paste action validates text as a secret directly.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L210-L268",
+          "version": "repo-lines-v1:sha256:ec92e53d98ee4855147784923634a17a95ecff659e33c145ef21b2db91dd7889:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjZDk2NDUyZmM0N2E2ZDUwY2Y2YjRkNzJjMDAyMGUwMTg2MjBhMDljY2ZlMjk2YmEyYzBiMzk4Njk1NDliMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3NTFhODE0NzQ3ODM5NWE1OGExNGFkNTEwZGU2MGZjYzQyOGQ5Nzc4NTM0M2YzZDViMzhlYjdhZDhjZThlZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4MjZjZmZhZDUxZjVlZTk1YmRlOTNhODNkYTIwZDVmOTIxMjk0NDg0ODgxODVkYzZkODEzZDhiZWVlNTY5YzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4YmVkNjhiOGIyYzc2M2ZlOTUwNTZmN2ZkNzcxODUwNWVmMTEzYzhkMGFiYzVjMjZmNmVhZmE5ZDM2YjZmNGIifQ"
+        },
+        {
+          "resource": "repo://src/components/ingestion/ManualEntryModal.tsx#L66-L162",
+          "version": "repo-lines-v1:sha256:158290aebaf4576533e230d4cec94d4046c56a9e8eca97d5f3bbcdd55102dab7:eyJzZWxlY3RlZExpbmVDb3VudCI6OTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwZTVkN2RmYThkMjliYzkzZDJkOTE5NmM2MjY1MzY3MGVhYmQ4YTFkMTk2MTdiYmU4OWMwMTg1NmY0NmEwNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2NzMzYzkzMDUxMTRhYTg3Y2IxYTg5ZjM2ZmUwMzViNThhZjk0MGFlZTRiYTRlNzMxYWI2NGRiNDUxMzY1MjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0Njg5MTU5ZTQ4YzA0NTIzNGYxNjE3MmE3OTFlYzU3YmE4NzM1Yjk1NTQ1YTRlNDE1NmFhMDgyZGYwOWVmZDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3f16b79ee8514bfa83125ab0a7651041",
+      "statement": "Clipboard resume auto-detection is an optional subscription for background/inactive to active transitions with cleanup, and the dashboard does not install it.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx",
+          "version": "repo-file-v1:sha256:f1b9f3791e48066dc77f93d17c7e1d023f379eedd880fa949f8afd8fdb23770d"
+        },
+        {
+          "resource": "repo://src/services/ingestion/clipboard.ts#L171-L195",
+          "version": "repo-lines-v1:sha256:5a259e2eb52e86b4c0086f291011edf104fd2fbc78aa072c3ec12d57729d4dad:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyZGUyMzVkNTlmMjM2OGMzMjgzNzZlMjUzNjg3YThmOWY5NDBhNTkxNzZjY2I1YzU2N2NhOWM2YTYwZjJjN2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjNTkzM2M4M2M0MWYwZTUyZjQxYTliYmVhYjg0ZjlmMzRmNjc4N2VmOTQzYTNkOWVhMzU5MjlkODdmNTQzNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cf8f5543faa740a7b8f21758da57bd0c",
+      "statement": "parseOtpAuthUri validates scheme, type, account and Base32, resolves query issuer over label issuer, supplies OTP defaults, requires HOTP counter, rejects cross-type period/counter, and uses parseInt for numeric parameters while tolerating unknown query fields.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L31-L182",
+          "version": "repo-lines-v1:sha256:fa54733f0ec1f7676289479cbaa3202dedcddb4ce8ab04d92324a461a5160975:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlMmJkNTRlMTAyNDU5N2U4OTY5MGIzNWJjODQ4MjZhMmUzOTFkYjA0ZWE3YTg1ZDVlMDJlNjVlYWE5OTJmMTQ5IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MmEyY2IyNWExMjJiNDQyMjFhNjIzNGVjNjYwYTdiNWZiN2Y5YmRlN2IzYjllMmIzYzU1OWEwZDk2ZmFjNzM5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4ZTc4MzlkMjQ0ZTA5ZTM0OTBiMTViMmQ0YzUzOWZjYmQwNzRjZmJmZWU3NGVkMzhjZDkzOWQ3MTAyMmFkNzNlIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzNzkyOWU5MWUwZjk5YzNlODI1ZGU2OWI0MzVmYjY0ODRkMWIwYTFkZjJmNDY1NjFhYmYxYTI5ZjA0MTg4Yjg4In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_546230fed0b44ad69c66932e59c20d9b",
+      "statement": "Manual validation requires trimmed account and valid Base32, normalizes type and algorithm, restricts digits to 6 or 8, defaults OTP parameters, and validates the relevant period/counter with integer checks; strings use parseInt.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/manualInput.ts#L85-L196",
+          "version": "repo-lines-v1:sha256:6d7c4675959dd2f8a3881b592f8074eb7b3d22f0bd78c2e20f53cd77514af358:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiN2IzMzUzNTNhZDkwY2M0ZDA0MTI2NjJlMGZjM2YxOWEwM2VlOGI3MDZmZTllZDZiODczOGJiNmZiZGU1NmEwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MmEyY2IyNWExMjJiNDQyMjFhNjIzNGVjNjYwYTdiNWZiN2Y5YmRlN2IzYjllMmIzYzU1OWEwZDk2ZmFjNzM5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmYTJjNGI1NjIxMzFlMmM4ZGQzN2FjZTVlNmFlMjhiYzlkOTU2MzkxMDIxNmYxODIxZDJlYTMwZTJhNjQ5N2MzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0OTI2YzZkMGFhNjY1MzM4YzE4YTZlYmE3MjYzOWU1YjQ3MTdmMmZjYjIxODBmOTU2MjE1MmI4MjA3MDc2MGQ3In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_be304e624d654bdea1320ab3c59599ef",
+      "statement": "ManualEntryModal validates secrets while editing, pre-converts period/counter with fallback defaults, validates on submit, checks duplicates against props and constructs via a helper that validates again; only account and secret validation errors are set inline.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/ingestion/ManualEntryModal.tsx#L84-L162",
+          "version": "repo-lines-v1:sha256:2be525a46652aa73e3aa1d04f41022b2ef2cf8d7369ab28a85c9e23aa29408ed:eyJzZWxlY3RlZExpbmVDb3VudCI6NzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViNzM2Mjc3YThhNzg3NTdiNzFjZTNjMmNmNmM4MTAyZTM0MzNiZTJmZmRlYWNlOThlODVhMWZkZmNkNDc5OWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlYWYyZjZlOTVmODEzN2ZhNzZlMTQ0MmU3YjYwYTQ4OTVmNWI5MzRmOWY5OTBkZTA3OTlmYWNiYWI1ZGRkZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0Njg5MTU5ZTQ4YzA0NTIzNGYxNjE3MmE3OTFlYzU3YmE4NzM1Yjk1NTQ1YTRlNDE1NmFhMDgyZGYwOWVmZDMifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/manualInput.ts#L227-L251",
+          "version": "repo-lines-v1:sha256:93d18daafbe4a662d449a5c6857575e230336e3d1df9e8b2fcfcb9232ff5a9b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NGNkNGMzYWMzZTNhZjcxY2U5YTVhNjMwYmYzNzFmMzUzMWQwOTYzNzEwNTgxNzlkZTk4ZTA2MWQ2MWRiNzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5ODI3YWVmZDVjOTdjNzU2MTY3OTc3NjE2NTE4OWZkYzAwMWIzYjA1Nzc4MDYxNTg3ZmY5NGFiOTdiM2FjNWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a40b6ae760354825aeb720805174581b",
+      "statement": "Duplicate detection requires equality of normalized issuer/account/secret, trims and lowercases issuer/account and strips whitespace, hyphens, underscores, padding and dots from uppercased secrets; other OTP parameters are ignored and a changed secret is allowed.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/ingestion.test.ts#L335-L389",
+          "version": "repo-lines-v1:sha256:7dfa1281d24ee00fedc9c4d9ec4c1cf51d08b1c3978cf787bb1b4cf66b563f76:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxNzk1ZjZiZWU5OWNjMjQ4OWY2NDQ4YTRhYTExYmI3ODBjYjI2N2U0ODkxYmZiYjE3OTg2MWI4YTY3YTRlZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzNDgyNTZkNDZkY2NkNzBlNTljOWMxZjRiZDk3OGM5MzU3NDk5N2JmZmU0MzFjNDhlYzhjYmE5YWI4ZDNhN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyY2JiMzFmMWI2MWMzNjEyNWU1N2QxZjVmZTJjYTlkNmY3Mjc5MzQ4MDY4YmYzNDM3YTYzYzJmYzlkZmRmNmYifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/ingestionRouter.ts#L50-L77",
+          "version": "repo-lines-v1:sha256:771f2500422d3d01cd35b5f83c3074a626b1054e48ced7f7cf7f82c45e1d6c6f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhZWY5NWUyZjNiYmE3NDlkODJlOGMzYjlkZTg1NGNiNzkxZDc1NjQ4MTY4MDE3MjRkZGI0MGQxY2Q5OTdlZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFjNmE0NDlmMGVmODhlZDZhNWE5NWRmOGY0ZTNhOTNjOWNiNzZjYTJiYWE0ZmRjMjU4Mjk2YjdjNTYxOGMyMmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ5YjQ2MTVkOGE4ZDdiMWZiOTNkNDgxMTllYjVlMzJhODQyNDMyMWYxNzU3NmNkMTFlOGE1OTRlZTI5NTFhMjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a31747bd9d0f404280639550a7378ba4",
+      "statement": "Vault save validation is limited to required ID/account/secret and valid type; the queued storage operation enforces ID uniqueness, not triplet uniqueness or full OTP validation, and encrypts the array with AES-GCM to vault.enc using a SecureStore master key.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L24-L175",
+          "version": "repo-lines-v1:sha256:a220eef347794585a54319c903e427a58a63ebeb059e1116f1d219ba2a41119a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1ODgxNGQxNzBjYWVlYTI2NTkwNjA4MjY4ZmVlODAxZmM4MTg1MDM3MDg4MzJkNDBiNDRkNjc5ZjAyMDc5ODlkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyMmQxMWNhZjQzZTk3ZWYzNjllNmJlZWQxYTI2OGJkMDU4MzhmMjliOWRkMjU0YmY2OWJhNjQ4ODQxNDcyMzRhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJkNmYzNDZmZTE2ZDVkODEyNzg0Njc5YzFmNTE5ODEzNzFjYTliNjFlMjgxOGFlNTFhNWVjZTZlYjI4Y2MwOTAxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1YTkyOTNmZDgwNTRiNmU0NzI0ODM3M2YzOWY0ZGQ3NzgwMDEwNWViNzU4MzQ4Njg3MjU0Mjg1Y2QxMjgyYjc4In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e23366e022145b5b8ce858980ccc6d7",
+      "statement": "useVault.saveAccount awaits persistence then reloads accounts and updates mounted UI state; dashboard duplicate snapshots and router account reads are outside the storage queue, so simultaneous unique-ID candidates can evade triplet duplicate checks despite serialized writes.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L118-L268",
+          "version": "repo-lines-v1:sha256:6ab43347a9f85284f123ee4915c06b2ffb1cb8b2627edbc705a8a501f29f2f2d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4MjJiNGFkYmM3ZjI3NDdhMzdmMWIxZGJlMGIwZTM0MzZmNDQ4ZmQ2MGFlM2I5YTcxYzQzMDgzNWQ4NDBjNzM1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2NzUxYTgxNDc0NzgzOTVhNThhMTRhZDUxMGRlNjBmY2M0MjhkOTc3ODUzNDNmM2Q1YjM4ZWI3YWQ4Y2U4ZWU5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzZTUzZTkyMTg1ZDMxNzk1ODc5MDEzM2FkYjdjM2IyOGE0YmRjOWQ3NDM4NDY0ZGM5ZThmODNjODY4Mzk4ZTcxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIwOGJlZDY4YjhiMmM3NjNmZTk1MDU2ZjdmZDc3MTg1MDVlZjExM2M4ZDBhYmM1YzI2ZjZlYWZhOWQzNmI2ZjRiIn0"
+        },
+        {
+          "resource": "repo://src/hooks/useVault.ts#L114-L118",
+          "version": "repo-lines-v1:sha256:21d0df519f652500d7037bcc6148376f774c36c45e06a6c6c4a97269a3899d58:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JiODFjYjU4Y2MyNzc2MmU5ZjFmMDIzODNkODFmN2I5YzgzYWUyNDYwYmM1YmU4Nzk4NzEyOGQxMGY4MWJlMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRjNTJmMDhiMzliMDhiMDFjOGQzMDhiZjg4MGIwYmVmMDJmZDFkZmNjOWQ5YWE5M2E0ZDFiNWY0ZDU4YjZjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzdlYWM1ZmMzYWQ4MDVkNWY4ZWI0NTI0NzZmY2IxYjZmNzU3ZTFlMDVjNmRkODk3MDc0NjNiYTk1MDRjNGJlMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzYyMzZlZWU4OGQ4MTc3NjA4NmM4OGM1ZjI4Yjc5ZTJlM2Q2OGY0OGQ4YTQwZGQ2ZGIzNGNkNDVhMmRlYjJmMCJ9"
+        },
+        {
+          "resource": "repo://src/services/ingestion/ingestionRouter.ts#L118-L150",
+          "version": "repo-lines-v1:sha256:07355e02f0e329f375b0b611f530c3c3c374a5ca0f04846c6a887906d2009eb0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzM2ZkMzYzMTdlMTM3MmQ0YTMxYWI1MzIxY2E2MjNiZjM3MGI5YzViYWQ2ZDJmZTEwYzNkY2JhM2JhMGY2YzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMDZlZGFlOGIzMjFmNDk2MDFhYzJmNWVhMTQ3YjM3MzkxMDg3YjA2ZDdiOWEyMWI2YmFhNTEyMDIxNWRhNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1ZGFhZDk0YWJlNGViOWM1NzU5MGZlOThkOGZmZjQ3NjQ3Yzk5MjQxOGM0ZDVlOTIyZTlhMDcyMjBkYTJmMTEifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L160-L175",
+          "version": "repo-lines-v1:sha256:263a74b8467a402fc4e65942cace06aae09ab662c80a0801d005918fd89f2019:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1OWEwMDFkYmFmYjBhNzY1NGNlMjAwMjhkZjYzZGRhYTJkYTkxMjQ5YWVjZjVmZTZkMmJjNTk5ZGFmOTcyM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlZjc5Yzg5NmZlYjFiMTc4OTM2NDg1OTIyYzAxNzIzYWMxNTk3MTY0MjMwNTFmZThjZWUxMDVmNDllNjNlYmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_22ca185a8ff7475d8a6fc5b54afd1903",
+      "statement": "Parsing success haptics precede durability; manual entry calls onSave without awaiting and closes with no submitting lock or save-error handling, and camera dashboard save lacks a local catch while gallery and clipboard have outer catches.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L118-L276",
+          "version": "repo-lines-v1:sha256:df25dfe5954765b977a412aee6846b3863be9e55e4bccf76d5180b502fbc1c35:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4MjJiNGFkYmM3ZjI3NDdhMzdmMWIxZGJlMGIwZTM0MzZmNDQ4ZmQ2MGFlM2I5YTcxYzQzMDgzNWQ4NDBjNzM1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzYTYyZTQxODQ2MTQ5ZWYwZWE4ZDcyODZlYzQ5YjljMjY5OGNlMmQ1MDRiZjcyOWQwYzE2ZmY2ZDVmMWNlOGRkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzZTUzZTkyMTg1ZDMxNzk1ODc5MDEzM2FkYjdjM2IyOGE0YmRjOWQ3NDM4NDY0ZGM5ZThmODNjODY4Mzk4ZTcxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiYzdiNThjMTk3MTFiNDZlMmQ5ODY1ZGUyOTgzNDlhMzNhNDgwMzJkZGJkZjU0M2E1NGI4NThjNDE2MDg0ZjI1In0"
+        },
+        {
+          "resource": "repo://src/components/ingestion/ManualEntryModal.tsx#L115-L162",
+          "version": "repo-lines-v1:sha256:817678f4129f86775a330865736e7b7932332b73cd472ce5dbecf3e533d4655f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmYjM5YTE3ZGE1Yjg1N2VhZjNkODhhYTRjZDE3ZTY4MGI2ODVjM2NkOWY5NGZiZjRmNDAwZmFlMDEyZGE2OTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0Njg5MTU5ZTQ4YzA0NTIzNGYxNjE3MmE3OTFlYzU3YmE4NzM1Yjk1NTQ1YTRlNDE1NmFhMDgyZGYwOWVmZDMifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L188-L210",
+          "version": "repo-lines-v1:sha256:dadd0ccd317c70de1084800b96de646cbf0c46554de7f5186136b9f3c4c1edc3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjZjI0MmRjNjljN2U1YmU4NTEzN2ZjMmYxNjljODgxNGM3MzFkMzVjMDg5NGQ5Y2Q2NzlmZjI4N2EzMmJkMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4OTYyNGZiMDYxMjhhZGI3MDMzNDlhNWMzNTZkYWU5OWY2ZmUxMjE4ZGEwMDA4Yjg0ZTU4MzhiNTIwM2ZmOTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2MDcxNWY2NWVhOTM3MTAxMTc1MGM4ODg0NDM2MjliYWViMzZjNzY5ZTQwNGQ0OWM0MjNmZDViZjNjNTc3NjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNTgwZTk2NGY4M2E0NzNmNDNkNDQzODQ2Mjk0OWQ2OGI1NjAwZmRhNzg3ZjE2Mzc0NWQwMGRlODljYmYzNmEifQ"
+        },
+        {
+          "resource": "repo://src/services/ingestion/scanner.ts#L300-L324",
+          "version": "repo-lines-v1:sha256:9ae908c7e1f8a542e4d69a02c669c35532b0c52457d1f921a049c700764a4f86:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkOGFmMzg1MTgxNjJhMTc4MzA2ODgzYTFkYzRhMWYzMjA1ZWZmMGMzY2E5NTg3ZjcwODZiNDU1YzMxNDU5MTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ODYyMzY3MjdhMjIxNzdiZTNkMTRiNTZmNzNhZjlkZWEzNGMyNjg3ZTU5NDA0OWI0NjBmNmRjMWNjNGU4ZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2Y2E5MjQ4ZmY0YjI0NjI1NGZhMGRkZjY5ZTFmMDU0N2VmYjhmZjBlZWRlNWQ0Y2I0MmYxOGJlMzZiYjgyZWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0597044485ad402ea19a74235df0c235",
+      "statement": "The router accepts already-decoded camera/gallery URI strings, manual forms and clipboard detections, returns success/duplicate/invalid, requires account metadata for raw secrets, supports arrays or vault account resolution and ID injection, and saves only when saveToVault and an active vault are present; save errors become invalid but resolution failures propagate.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/ingestion/ingestionRouter.ts#L87-L300",
+          "version": "repo-lines-v1:sha256:9255e357f77c5c6ee666b37a9afd78a3c65f566b7fda0c7ade27c672f25bfdf6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjE0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1ZjhmMTc3MTVhN2Q3MmY0NDk4NWQ3ZWM3Y2VmZTg4Njk4YTIwYzZhMjIyZjlkYWE2MzY5ZjQ2NWVhZDMzOTEyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIxZTJmOWUzMjIwZGE1NTQyYjg4ZDlmYWU0ZTQ2NTczNWM3NjM0Y2JhOGRmNzllOWI2OGIxMzNhMzA5MDQ1ZmE1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_03dcf2bc851a493b9a8ef59429ce8b90",
+      "statement": "Scanner and ingestion unit tests plus adversarial tests cover frame floods, cooldown recovery, gallery offline settings/errors, clipboard caching/force/PEM handling, manual validation and router duplicate/save behavior; the adversarial concurrency test seeds one account before parallel duplicate checks against a duplicate-rejecting mock, not real simultaneous first insertion.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/adversarial/challenger_m2_ingestion.test.ts",
+          "version": "repo-file-v1:sha256:77190c0b0a17fcdf396111a5a033d75b0ed6edc22c22dc38abdce05c4e9a61a8"
+        },
+        {
+          "resource": "repo://__tests__/unit/ingestion.test.ts",
+          "version": "repo-file-v1:sha256:1ee02fbbacba4784d3a211220a3dbc3e520038a46e88b94e885aa8e629566910"
+        },
+        {
+          "resource": "repo://__tests__/unit/scanner.test.ts",
+          "version": "repo-file-v1:sha256:25c05cbb725cd4f8a9ec3f14f61255804c2703bb7bca4458770128dd3badeb95"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-10T07:14:35.895Z"
+  }
+}

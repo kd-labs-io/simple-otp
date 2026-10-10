@@ -22,4 +22,8 @@ onMounted(() => {
     <a href="./en/" style="padding: 8px 16px; border-radius: 8px; background: #F76B00; color: white; text-decoration: none; font-weight: 600; font-size: 0.875rem;">English</a>
     <a href="./vi/" style="padding: 8px 16px; border-radius: 8px; background: #334155; color: white; text-decoration: none; font-weight: 600; font-size: 0.875rem;">Tiếng Việt</a>
   </div>
+  <div style="margin-top: 24px; font-size: 0.8rem; display: flex; gap: 16px;">
+    <a href="https://kd.io.vn/apps/simple-otp/" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; text-decoration: underline;">KD Labs (Tiếng Việt)</a>
+    <a href="https://kd.io.vn/en/apps/simple-otp/" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; text-decoration: underline;">KD Labs (English)</a>
+  </div>
 </div>

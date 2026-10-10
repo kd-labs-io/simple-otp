@@ -10,6 +10,12 @@ hero:
     alt: Simple OTP Logo
   actions:
     - theme: brand
+      text: Download on App Store
+      link: https://apps.apple.com/us/app/simple-otp/id6816673973
+    - theme: alt
+      text: KD Labs Showcase
+      link: https://kd.io.vn/en/apps/simple-otp/
+    - theme: alt
       text: Get Started
       link: /en/guide/getting-started
     - theme: alt

@@ -1,56 +1,91 @@
-# Welcome to your Expo app 👋
+# Simple OTP 🐾🔐
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![Download on the App Store](https://img.shields.io/badge/App_Store-Download-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/us/app/simple-otp/id6816673973)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Offline](https://img.shields.io/badge/Network-100%25%20Offline-orange?style=for-the-badge)](#zero-network-architecture)
+[![Expo](https://img.shields.io/badge/Expo-SDK%2052-000020?logo=expo&style=for-the-badge)](https://expo.dev)
 
-## Get started
+> **High-Security, 100% Offline 2FA Authenticator guarded by interactive companion mascots.**
 
-1. Install dependencies
+Simple OTP is an open-source, zero-network two-factor authentication (2FA) mobile application for iOS and Android. It keeps your sensitive verification codes guarded inside hardware-backed storage with zero telemetry, zero analytics, and zero outbound network calls.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📱 Official Download
 
-   ```bash
-   npx expo start
-   ```
+Simple OTP is officially published on the Apple App Store:
 
-In the output, you'll find options to open the app in a
+👉 **[Download Simple OTP on the Apple App Store](https://apps.apple.com/us/app/simple-otp/id6816673973)**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ✨ Features
 
-## Get a fresh project
+- **🛡️ 100% Offline & Zero Network Perimeter**: No internet permission requested, no cloud sync, no tracking, and zero telemetry. Outbound network APIs are fail-closed intercepted at runtime.
+- **🔐 Hardware-Backed Vault**: Master Vault Keys are derived with PBKDF2 (100,000 iterations) and stored in iOS Keychain / Android Keystore with AES-256-GCM authenticated encryption.
+- **🐱 Interactive Mascot Companions**: Choose between **Cipher Cat**, **Byte Dog**, and **Shield Bunny**—smooth Reanimated sprite companions that react to your actions with real-time feedback and speech bubbles.
+- **⚡ Standards Compliant**: Full support for RFC 6238 (TOTP - Time-Based) and RFC 4226 (HOTP - Counter-Based), compatible with SHA-1, SHA-256, and SHA-512 algorithms with configurable digits (6 or 8) and periods.
+- **📷 Multi-Channel Ingestion**:
+  - Live Camera QR scanner with instant validation.
+  - Photo library QR image picker (processed entirely on-device).
+  - Clipboard auto-detection for `otpauth://` URIs.
+  - Manual entry with automated Base32 sanitization.
+- **📦 Encrypted Backups**: Export and restore your 2FA accounts in password-protected `.simpleotp` encrypted packages.
+- **👁️ Privacy Shield**: Prevents screenshots and masks sensitive screens in the system app switcher (`FLAG_SECURE` on Android and privacy overlay on iOS).
+- **🎓 2FA Academy**: Interactive in-app security lessons explaining authentication principles, offline safety, and backup hygiene.
 
-When you're ready, run:
+---
+
+## 📖 Documentation
+
+Visit our full documentation website & official showcase:
+
+- 🇺🇸 **[English Documentation](https://kd-labs-io.github.io/simple-otp/en/)** | **[KD Labs Showcase](https://kd.io.vn/en/apps/simple-otp/)**
+- 🇻🇳 **[Tài liệu Tiếng Việt](https://kd-labs-io.github.io/simple-otp/vi/)** | **[Trang giới thiệu KD Labs](https://kd.io.vn/apps/simple-otp/)**
+
+---
+
+## 🛠️ Development
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v20+ recommended)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
+- [Expo CLI](https://docs.expo.dev/)
+
+### Setup
 
 ```bash
-npm run reset-project
+# 1. Clone repository
+git clone https://github.com/kd-labs-io/simple-otp.git
+cd simple-otp
+
+# 2. Install dependencies
+npm install
+
+# 3. Start development server
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Running Tests
 
-### Other setup steps
+The project includes unit, adversarial, stress, and end-to-end test suites:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm test
+```
 
-## Learn more
+### Building Documentation
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+cd docs
+npm install
+npm run dev     # Local preview
+npm run build   # Production bundle
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 📄 License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.

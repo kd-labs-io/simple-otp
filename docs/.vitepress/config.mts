@@ -41,6 +41,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
+          { text: 'App Store', link: 'https://apps.apple.com/us/app/simple-otp/id6816673973' },
+          { text: 'KD Labs', link: 'https://kd.io.vn/en/apps/simple-otp/' },
           { text: 'Getting Started', link: '/en/guide/getting-started' },
           { text: 'Security', link: '/en/guide/security-architecture' },
           { text: 'Backup & Restore', link: '/en/guide/backup-restore' },
@@ -58,7 +60,7 @@ export default defineConfig({
           },
         ],
         footer: {
-          message: 'Released under the MIT License. 100% Offline & Zero Network Tracking.',
+          message: 'Released under the MIT License. Published by <a href="https://kd.io.vn/en/apps/simple-otp/" target="_blank" rel="noopener noreferrer">KD Labs</a>. 100% Offline & Zero Network Tracking.',
           copyright: 'Copyright © 2026 Simple OTP',
         },
       },
@@ -72,6 +74,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Trang chủ', link: '/vi/' },
+          { text: 'App Store', link: 'https://apps.apple.com/us/app/simple-otp/id6816673973' },
+          { text: 'KD Labs', link: 'https://kd.io.vn/apps/simple-otp/' },
           { text: 'Bắt đầu', link: '/vi/guide/getting-started' },
           { text: 'Kiến trúc bảo mật', link: '/vi/guide/security-architecture' },
           { text: 'Sao lưu & Phục hồi', link: '/vi/guide/backup-restore' },
@@ -89,7 +93,7 @@ export default defineConfig({
           },
         ],
         footer: {
-          message: 'Phát hành theo giấy phép MIT. Hoạt động ngoại tuyến 100% & Không thu thập dữ liệu.',
+          message: 'Phát hành theo giấy phép MIT. Giới thiệu bởi <a href="https://kd.io.vn/apps/simple-otp/" target="_blank" rel="noopener noreferrer">KD Labs</a>. Hoạt động ngoại tuyến 100% & Không thu thập dữ liệu.',
           copyright: 'Bản quyền © 2026 Simple OTP',
         },
       },

@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:748bd86246a57102b2f426160ddf4b787ffc8993698149ec2e43d775b94e2997",
+  "claims": [
+    {
+      "id": "claim_b3a993afc66748d4942b0cabb2c11960",
+      "statement": "The current app/package version is 0.0.3, with Expo ~57.0.26, React 19.2.3, React Native 0.86.3 and TypeScript ~6.0.3; application entry is expo-router/entry.",
+      "evidence": [
+        {
+          "resource": "repo://app.json#L2-L9",
+          "version": "repo-lines-v1:sha256:c4064dd43312572c397156b743ccb7c76a757ec4000aeb2b34eb84f92c21ff4f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2VlNjQxZDQzNDRiN2VhMzBkZmQ0MjgwMTUzYzYyOWE5YzU1ZDNmOGUxOWQyZGUzYzc4NGE1ZWE2YTU4N2RlZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDVkMjlmOTcyNzMyZTIyMWE4N2UxYWIzOTFmZWU4OTBhNzhiODRlOGViYjAwOTE3OTlmNzE1NGZmZDU5NmMxYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZmYjA4ZmRhMWFjYjk1N2I2MTE2YmQzNzgxMWExZmU0MWEwMTYxMWMwNjMxZWRiZjc4NmQ2ODg5YTI3YTU1YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjQzNzZhYTRjN2FkMjBhYjkzM2Q3YzA1N2QxNTFmMTNlNDI0MDY4ZjE5YTA4NTlkNTY3MDZiNDJjZGM3OGE4ZiJ9"
+        },
+        {
+          "resource": "repo://package.json",
+          "version": "repo-file-v1:sha256:f7420023084bd7063b4ad85fab54e79b5d3f7ede65bd3bcb8db4f0934a34b7ba"
+        }
+      ]
+    },
+    {
+      "id": "claim_652022f9a30448399298f658769e1571",
+      "statement": "The start script runs expo start, ios/android run expo run:ios and expo run:android, and web runs expo start --web with static web output configured.",
+      "evidence": [
+        {
+          "resource": "repo://app.json#L38-L41",
+          "version": "repo-lines-v1:sha256:b50dd8684bb01ff6efa3a3feea9734c066b29552b1fab0260fa1e118d3b13e63:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDlkMTQ4NzhlMjRiOTE2NmNiMjRiODM1ZGYzMTM2YjBlNDQ4MTJlYmYwZmZhODhmMjYzYTM3YWE2NjM0MTI4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYwY2RiOTcyYTdiZmI3ZWQyNDZmOWZmNjcyMzg1ZTU1ZjQ5NjhmYzExMDQzZGM1YjY4NGQ1MWRmYTMxZGJjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzkzOGViNmI3YWRmZTViNGUzMWE0NDNhNzA2YTM4YTM2MTVkZjNmYWY5ZGFhMTEyMjQ2N2Y5ZGVhY2NjZTJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTk2ZTlhMWU3MmI1MmJiMTk1YzY0OGU1NTdhNjY5NjM1MTg3MzAyNWI1YzYwNzE1NjA2NjZkODZjMzNkY2MzMyJ9"
+        },
+        {
+          "resource": "repo://package.json#L61-L71",
+          "version": "repo-lines-v1:sha256:9afc0c8c8cdbb03a1f7cdb7b84d8ba8f2e0dd41eab223d3a12123ff398cc0436:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ODMzZDU5NDljMDNhNDBjYTk1MjQ5MTYxMGE2NjU5NjQ0YjNhYTQ2NjM2MmY3OTkwMjBkYmYxOTgxNTQ3ZGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMjc1YmZjMjg2MTE0NjQ1OTQzNTMwM2VjMmQwOWU1NGE4NThiMzE0NDc4N2QwMDNlNWEwOGMxNjliYmQ0MTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlYjE0ZTc1ZTY4ZWE5M2YwY2U3M2U0MDYwNzU5ZjcyYjU2ZDQwNzY4MGE4YjkyYWNkYmNmZGNlMzM1ZjZmNjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ZmI5YjVlZDk4MTMyZmI2ZDRlMjNlZmJkZjJkMDIwODEwNmJlM2NmNjJkNWNiMjIzMGFlYzM3Y2IyNDk1NzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5daaeee9f48241c28a933d7635007b61",
+      "statement": "AGENTS.md requires mobile-first development, SDK-matched Expo documentation, expo install for compatible dependencies, and lint and typecheck before declaring work complete; native code beyond Expo Go's bundled modules requires a development build.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L1-L24",
+          "version": "repo-lines-v1:sha256:11616ed26af39e66ac381bd8caf1aea3d9e6d2b42d596bac76fc682b0b37aca3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0NzFiMGQxNTdmYzRjNTQ4NjNhYmZmYjFjNzlkMWY2YmFmY2YxOTJmYWVhNDM1MjgwNTBjOTViMGY0ZmY2ZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmZThjMjI5MDk2NmMwMWEzMGEwMzQzYTU3NzUyOTFmZTViMzRjYmY3NDA5ODcwYzhmYjNmMzBhYzU0MTIzYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3M2Q4MjQ5NzdjZDc1ODYzNjk5N2MwYmY3YmEwODVkYTc2Nzg1MGExNzljNGY0ZGQzZDhiYjc0YWRlMDUyMDEifQ"
+        },
+        {
+          "resource": "repo://AGENTS.md#L37-L41",
+          "version": "repo-lines-v1:sha256:b779733166a1c9aa6fc57e7486806e5cdb04733967e5a324f8d16daebbe32fe7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTI0YjA4N2M0YzA0MjJmYTg0NDUxNDY4MDg5YThhYzczYzBmYjFhYzRjYTg3OGZlMmU0MzUwOWY0ODZhYmI2MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmQ1YzM3Njc3ZGZmNWU5ZjAyYjZlNDdkMTQwNDg1NTA3NjljOTdlMGIwNWI1ZDNlMzMxOWIxNGJhNGVkNDkxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzZlOTdmYTU4NDNhNmY5NzE5Y2Y0MGYwZjYwZWZlMDRhYWY2OGMzNjA1Y2RmY2I5ZGZkMjlmNTZlNjcyNWQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWIxYmM1YmM0YTIzN2Y1NzhlNmFmNGE0MTVkMDY0N2Y5OTEwYjAzYjM2NGUxZTI3YzFmMWRiYWE3NDNkMDNiYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f17222471ba64c1f983fe83d5f96edbb",
+      "statement": "The EAS development profile enables a development client and internal distribution.",
+      "evidence": [
+        {
+          "resource": "repo://eas.json#L6-L13",
+          "version": "repo-lines-v1:sha256:d1c0af12b4e957862624c0e34bb96259849dbbb83d7b6d175f8bcae087e23364:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2IwNzIwMWJkYjZiYzA1OTIwODQ5NjM2ODE4NjFhNGZhMTRhZmRhNTkxYjZkNTY2MWI3NDU4ZDkyMWQ1ZDBlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYwY2RiOTcyYTdiZmI3ZWQyNDZmOWZmNjcyMzg1ZTU1ZjQ5NjhmYzExMDQzZGM1YjY4NGQ1MWRmYTMxZGJjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWFjMzlmZTYwMWNhYzA1ODRkMmFlODY3YTgzZWNjZjg1ZGE5NzZhZDk2ZjIxZTMxMjJmZWNkMGFjZWU1ZjU1YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmNhNDdiNTQzZjYyZjAwNWI2YjQ5ZDFhZDRkNTgwNGY3M2JkMGIxMTQxNGNhOGJiZTAyMmRjNWZhZDI2YzYxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_08bdc1809f204be58e3796eafa2e2293",
+      "statement": "README.md remains an Expo starter guide whose reset-project workflow is described as moving starter code and creating a blank app, not ordinary authenticator maintenance.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L41",
+          "version": "repo-lines-v1:sha256:269551164ee2e9330666698bd054700cf79d9d7f87f6f145c78932a072ce4b73:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliYWFhMGJkYWMwZTBmMmVmYzU0ZGY3NTYwNTdjNGM0ODBlNTNhNDAyMzdiODIwMGYyMDZjZDUwN2YzYWUxNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzODNmMTE3MWI0M2M5NGQ3MjM1ZjA3YTZmMjM0ODQ5MTBkNzBiNzNhZmFkYjk2OTE0NTJlMTA3YzgzODVmNTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlMzI2MTU5NjYzMTVkZTRkMzM5N2NiNDVlYTcwYWE5YTNlZDg0OGQzYWQ3NDM1NjEyYzgyZjc1MDQzMWE4OTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_075ffd6263354729ab3edc9ffb8deadf",
+      "statement": "The root layout imports crypto and i18n initialization, installs the network blocker at module startup, and renders a themed Router stack with a splash overlay.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/_layout.tsx",
+          "version": "repo-file-v1:sha256:33a65c61f4442dfda53ea1a3171e045a2ca060d03d9ce2682f5ffadb3a24e98d"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec23bb9b532d4f7193a1c7874bb3b9a3",
+      "statement": "The single-screen dashboard coordinates vault account state, companion state, account cards, ingestion and settings modals, QR transfer, and privacy UI.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx",
+          "version": "repo-file-v1:sha256:f1b9f3791e48066dc77f93d17c7e1d023f379eedd880fa949f8afd8fdb23770d"
+        }
+      ]
+    },
+    {
+      "id": "claim_ff226cb4db2249929bebe728f69aaeda",
+      "statement": "useVault owns the dashboard account snapshot, case-insensitive issuer/account search and shared one-second clock, resynchronizing the clock on foregrounding.",
+      "evidence": [
+        {
+          "resource": "repo://src/hooks/useVault.ts#L25-L111",
+          "version": "repo-lines-v1:sha256:575403cd7b127cc9470a07e1bf20415703bc07086d1cc1789ccf06a05962dbe8:eyJzZWxlY3RlZExpbmVDb3VudCI6ODcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhZGUyYjMzYjQxNjdkMTNiYzQwMzkwNDQ2N2Q1MWRlYjNlMGUyYjdjOWMzZWFhNTA4ZDA5YmU4YTNhZTQ3ODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiOGMyODJhZTYxYzljODFmOGFkNzQ1NDA4MjMyYmZmMzg4MmJlZmI2MGFkMzkwZDEyMGE4YTUxMTYyZDhmNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2Y2QzMzM0YmRkZGVlNjUyOGI3ZDVhNmU5MWFmOTRiMjJhZTBhNmM0YzUyM2Q0ZTUxYTI1OGMxN2E0OWQwZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ4NTg1MmI1NDMxNWQ4YzUwMjljOTM2MzhkMzRiZmFjNDlkYWJlNDQzMWU1NWFjM2FjZmVlZTcyOWM4YTkxMjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d21fae89dcba431ea4466e2a03a2889b",
+      "statement": "useVault mutation methods await storage operations and reread accounts before updating React state; load failures are logged and loading/refreshing flags are cleared.",
+      "evidence": [
+        {
+          "resource": "repo://src/hooks/useVault.ts#L113-L150",
+          "version": "repo-lines-v1:sha256:997913a17153108dfb739e0977ed9cdf9f4e1dc039c3d35e4296b328c4c818bd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4ZGYyNDI3Y2E2NmU5OWIyMDI0YWIyODFjMWNjMzY5Mzg3MzJhOTJiYzZhYjYwNzFiYjY5MDI3M2JlOWEwYWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYzUyZjA4YjM5YjA4YjAxYzhkMzA4YmY4ODBiMGJlZjAyZmQxZGZjYzlkOWFhOTNhNGQxYjVmNGQ1OGI2Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNDI1Mzk0NzAzNzY3Y2FhYjE4N2E1ZTEyOTQyMWVjNTM4MWEyZTQ5MGQwOGJiOGFjNTg3M2Q1ODQ2ZDhkM2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhM2EwNzg0NmI2OWQzZWM0ZjVjMzAyMzJiMWRlY2UxOWNjYzI4NGQ3ODAzNDEwNDUxZmIyYTVlODA1NmY0ODAifQ"
+        },
+        {
+          "resource": "repo://src/hooks/useVault.ts#L34-L49",
+          "version": "repo-lines-v1:sha256:d262ab6b347a2a7f0f9ddd67a75b622731c4a7f8a9f67523b7f69ee278ccb432:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1NjBmYWJkNTIwNjYyMzUxNWJkMTYyZGQwZTZjMzkxOTcyZTQ5ZjE3ZTE2NGM3MjVhZDYzMGJjOTllNzBmNGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1ODNmZDhmNTVjODFkY2ZiNWQ0ZWQ3N2UxYmRkYjliNmUzMzc0MTdhNzk4YzM0ZWM0MTBhMDNiZmE3YzllNGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRhZmM0NjczZjhjNzZjMmYzMGZhNzU0MzdlYzM2YTczZmQyNmYwNGMxZDhkZmZjMTdkZmM0ZDk4ZDU4NDI4NjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_94bf720db64b4d0e888057fb007f7926",
+      "statement": "The network blocker intercepts JavaScript fetch, XMLHttpRequest, WebSocket, EventSource and sendBeacon, with non-test local-resource exceptions for fetch/XHR; this implementation is a JavaScript API perimeter rather than an OS firewall.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/network/networkBlocker.ts#L23-L133",
+          "version": "repo-lines-v1:sha256:b007853757505fa7e79a6d5126e1b0a128b7efd0bf822477b3145cd857a7bc58:eyJzZWxlY3RlZExpbmVDb3VudCI6MTExLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyMzJhZTAxMjM5ZWU3MjVjNTMyNDZiNWQ3NWE1Yzg4MmY3MTA0ZjA3ZTgwYTJlYjM2YTlhN2NiYTE4Y2Q5Y2E2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyN2U1Nzg4ZDVkOWQ3M2QyNGE4MWRiYzBhNWE3NGJmYTgyYzljM2IzYWY5OWU1MmFmNzk2ZTkwYjQ2OGE4YTNkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyNjQwMTA4ZjI2YmUzNDQ1MWUwMjIwM2Y1MjYwYjUzODZhODNmOWNiNTgyN2I3OWRjNWFjMDgyMWY2NTRjMzNjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmMmVjOTI1Y2MxMDhiZGE1M2E0NThhYjY0NDY0NDUwYzNlZWRiNmMzNjE3ODllMGQxYTdkYzU4NDE2MzhkZmYxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_4acc9ded1c174e9186df99156d81dfba",
+      "statement": "The vault stores a 32-byte MVK in SecureStore and AES-GCM encrypted account data in vault.enc under Paths.document, serializing mutations through a Promise write queue.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L125-L228",
+          "version": "repo-lines-v1:sha256:e2a523d17e9a44b136e285c0feba09b235fcc840ec6ae14c6f5fa3a404eb83a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI0ZjJhMmY5OTZmMDhlNjgwYmQyOTIxMzVhNmZhNDk3OGJkYTI2ZTYwMmQ4NGYzM2NiMWQ1OTQ3NzVkNDMwNGI1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyMmQxMWNhZjQzZTk3ZWYzNjllNmJlZWQxYTI2OGJkMDU4MzhmMjliOWRkMjU0YmY2OWJhNjQ4ODQxNDcyMzRhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5N2Q4NjMyZTU0ZTkyOThhYmI5NTg3MjdlMmQ1MTQwOGFiYWYxMzY2MDM1Mzc5MTAxNDBhYmY2NWIzMGFiNjEzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1YTkyOTNmZDgwNTRiNmU0NzI0ODM3M2YzOWY0ZGQ3NzgwMDEwNWViNzU4MzQ4Njg3MjU0Mjg1Y2QxMjgyYjc4In0"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L24-L75",
+          "version": "repo-lines-v1:sha256:7a0b47056ef5d9d987c28b916ae6750bd0fb3fb9a9f42cdbc3e0a947b3b40f32:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4ODE0ZDE3MGNhZWVhMjY1OTA2MDgyNjhmZWU4MDFmYzgxODUwMzcwODgzMmQ0MGI0NGQ2NzlmMDIwNzk4OWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ2ZjM0NmZlMTZkNWQ4MTI3ODQ2NzljMWY1MTk4MTM3MWNhOWI2MWUyODE4YWU1MWE1ZWNlNmViMjhjYzA5MDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2OGZlM2IyOWFlNjc1Zjc5Njk0Yzk2OWJiNmEyN2NhZjVmYWU5N2NmZGIyNmZkYmQwMWVkNjAxYmE3ZjJhNDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_130e55f01a5a47409efff3a904b069e3",
+      "statement": "Camera ingestion in the dashboard checks parsed account duplicates before building and saving an OtpAccount, and success feedback follows completion of saveAccount.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L118-L155",
+          "version": "repo-lines-v1:sha256:794e233ecf9ddd3317cf8b23203b636d6e42f6d2784b1401e27d0479af3c4012:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMmI0YWRiYzdmMjc0N2EzN2YxYjFkYmUwYjBlMzQzNmY0NDhmZDYwYWUzYjlhNzFjNDMwODM1ZDg0MGM3MzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3NTFhODE0NzQ3ODM5NWE1OGExNGFkNTEwZGU2MGZjYzQyOGQ5Nzc4NTM0M2YzZDViMzhlYjdhZDhjZThlZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNTNlOTIxODVkMzE3OTU4NzkwMTMzYWRiN2MzYjI4YTRiZGM5ZDc0Mzg0NjRkYzllOGY4M2M4NjgzOThlNzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyN2E2NWNhY2U2NWJhMWZmMTUxNmU1MWFkOGRlM2NmMDA1ZDgyMTg4YzI5YjI2Mjg0YjNjYzI3OGFkMjFjYzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f9f4e6b4b964ec5842fa70364f011b8",
+      "statement": "PrivacyShield subscribes to privacyShieldManager shield/lock state, starts AppState listening, and delegates biometric unlock to the manager; the component itself is a visual overlay rather than a key-erasure mechanism.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/common/PrivacyShield.tsx#L15-L63",
+          "version": "repo-lines-v1:sha256:d05a3c08053d1ab8108d17b91120ab51b5a0da065ddd5fcd27c9db39ab255a72:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkN2RkZmE5ZWJlYzBiNDI0NzEyMmQ1ODg4NmE1YzI1NjcxNjM1YTIzMjdmZWJhZDJkOGVhMjM2NWE4ZGIyMzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5MDZjODEyZWRhMDE3ZWUwMzcwNmNmZjQ0N2NmMjg2YmYzMTlkOGMzYTE4ZTBlNzhlNzI4MmFjNjY3Mzk4MTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2YjVmOGQ2NDY5NTE0MmRiODViYzMzMDQ0N2I1NjNiOWQ4NTczYWUxZmFjZjViYzliZGRhOGFkODJiNTViZGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExYTFjZDhjMzc4YmE3NmZlZGUyODYzM2FhNWIxOGI3NjUwYjQ5ZjcxYjQ0NGEyYzJhNzI1M2E5YWM2MWY5ZmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e9b592c345a4916aa7f1dd03dcde16c",
+      "statement": "Settings backup export encrypts vault accounts before writing a cache file and sharing it; restore decrypts the selected file before offering a strategy, and replace resets the vault before sequential account saves.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L233-L258",
+          "version": "repo-lines-v1:sha256:9d9678e72eb7d6fdcd748027d19a99717878b29af0ec219647ead7fe1dc7dae3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExZGY4N2E0NzMxNmM3MDhjNTUwMjA5OGU5YWY2YzQ0NTM0ZWI4MGJlYWRjZjYwNjMwMjhlZmNhODU5MzdhYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxN2FmMTEwMWM5N2I3YzJmNTI1NDA3ODJlNjM0Y2M0NDQwZjBlOTcwMzQxZTUyZjk3NTIzMTFkNzhiN2Q3ZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxZmNkMGMxZGQzMGIyMTc1NGUyODJiYjBjNjgyNDIzYWI1YTRjYjdmMDMxYjU4NjI5ZGNhMmM1M2FjYzVkNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5N2QyYTVlYTE3NTVmNzMwODkxZDQ2ZDI1OWYyMWI2MzA2NDRmYzM3NGVhZWRlOWZiMjM4MzJmOWMzYzQwOTkifQ"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L271-L345",
+          "version": "repo-lines-v1:sha256:438eb4fda0a5d7b50e97313e29218aa10c156b14fdfbff9cd7381f840eef308d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyZTExMDcwOGRlMjFjZWU3YTY0NDNlMzdhYTczNGI0NmVjYzA2YTg5YjgwYjk2Yjg2YmNmZmQ2MDhhOTM1MjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwYmZmYWE5M2E1NjkwNjFlYTc4Yzc5OTZlN2VkMmMwN2E2MWIyODhjZjViOGI4ZDMxZWFhYmJhMjMzMDkzNDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkZWZmNDUyZjc5ZjgwZDljODE3NDZkYjM3ZDQxMWI0OGU0NzU2MTRiYTgwZDU1NTdkZGNjZWZkMGIxNWI3NWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d395abbe77ad44b6b3adfa561ef0639d",
+      "statement": "AccountQrModal generates an otpauth URI and displays/formats the account secret with an auto-cleared secret-copy action, so transfer exposes reusable credentials rather than only a temporary OTP.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/AccountQrModal.tsx#L19-L67",
+          "version": "repo-lines-v1:sha256:512da72da9e794eb4940b9582b849b6bf74fe1fb41d2f5e917dfa673e4da3033:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwZWNmNWU3Y2ZjMGZhNWUyOTEwZGY0NTBhZDZjMjQwOTQ4Yzk4MDg2ZGU1ZDkzY2QwOWM3NzY5NzJlYTc2MjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlOWMyYzExNzU0Y2UxMzJjNWI2YmZlMWQ3NzllNjU1YjdhMjNlZDI2NWViNTA2OGRhYzA0NDIxM2RjNjY5MjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViYjYzNTg1MzNkZjg4MWRhYzQzZWNkNjFmNWE2MjFhODUzNzliMzU1NDU2YjdmMDMzMWI5ZDBlMGY2ODE5MjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5f240679d2846adb23176ee4ac002d5",
+      "statement": "Dashboard account count and TOTP urgency feed usePetCompanion, and code-copy feedback triggers its copied state; the companion hook loads and subscribes to selected-pet preferences and resolves mascot state.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L107-L110",
+          "version": "repo-lines-v1:sha256:30edaae94896277e7fa903b44c37fbf638e01a74d30631416b2b8ac69f1779a1:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTIyNDZkMjYwZDA4ZTVmNDU0MmEwOTQ3NGJkNGFhMjI4MTE3MDNlMTc0OWYwYjY3MWUyNmFhODYxM2E1YjQwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmM4YzhjNTMwZWNmYWZmNjlkMTg0M2NlNmUwNWY1MzI4Y2YxN2U4NjYwZTEyOTUzZmY1MTgzMWM2Y2YzZWM0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzRjMWM2NzcyZGI1ZjQ4NWI0NWZjNWNhMTVlOTI5OTg3YTgwMWZlMmM5M2I3MTE2Y2Q4NGFlMjkxYmEyNmY0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTE3NGYxNWVlZWY3ZGVhYzAzYTNlNDcxYzAzY2UyZDNkNGQyODc4MGE0MGZjMTc0YTk0YjRlYjZjMDgyMzQ4MiJ9"
+        },
+        {
+          "resource": "repo://src/app/index.tsx#L72-L75",
+          "version": "repo-lines-v1:sha256:ac4814326929af9343f4f5d6762bb6c193f419265b7c71dde7b7374bd86eacae:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QyMDdmYzg3ZGJjN2I3ZTBkM2E5ODFlMjcyZmFjZjhjNjljMTE0YzRiZjBmYjE1N2RkYzg3ZDBiMjJjM2E4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2EzZTQ2Zjk0Mjc2YjZmNmY0ZWQxZjAyYWY3OGJlZjZhMmVlMWM0MzlkZDU1ODRiOTczOTQ4MzEzMjE0ZDJiNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzZlYjU5MzczNmI5NDliYmQ3NDExZTRhMTFjZDcwOWIyNmU1YzQ2MzM5YTc2ZGI1ZGQ2YjQ4OWRhYWM1OTlmOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDg0YzJlNGUzMGQxYTZlMTlhZDAyM2JkYmM5NGMzYTI5NTdkYTQxYjZkN2MxNjI4YjU3NzgwYzQ2YThiMWM0ZiJ9"
+        },
+        {
+          "resource": "repo://src/hooks/usePetCompanion.ts#L18-L74",
+          "version": "repo-lines-v1:sha256:809fe226dcaf388fe1a131c6efa599bfdf800fb15f27e9a44359d5cb19ed09c8:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmZjM2NjA2NjdjNWFiZTI4YjczMjY1YjAxOTM2NjliZDI5N2RjNDEwYWY3ZjM0MWNjMDRmYjU4MDk1NjM1ZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYzUyZjA4YjM5YjA4YjAxYzhkMzA4YmY4ODBiMGJlZjAyZmQxZGZjYzlkOWFhOTNhNGQxYjVmNGQ1OGI2Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM5NjIwOTQ4Yjk5ODQ2NjU3YmMxYzU0MDMzM2Q4MDViMzIzNTVmYzQ1YTZhZDEyM2RlNGZiMDJkOGFiNTRiN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExMjVmMjQxNmZjNzYyMjViNWUwYzhjNTE5N2JkYjE5NDBkNTM5MTIwMDFiZmNlNTBhODMyNGRmMjAyMmFmY2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc761c3abc8c4b6cac9e91e903507b0a",
+      "statement": "Settings integrates pet preferences, language selection, and biometric-lock controls alongside backup operations.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L38-L56",
+          "version": "repo-lines-v1:sha256:189b89432a3f596011f6c6cadf9b6db4535fd1348d589bde269027dd8b361096:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZDJlMWM4MGQwYWUxZmE2Mjk3OWFiZWNiZmQ4MDFlM2I5MDlhZmUyYzNiMjllMjlhYjFlYjNjNzMyOTk4YzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzYzdjOTM4NjZlMWE5Njc4MmE5YWYyZTIyNWJkMDg3YjUwMzAwMmU5MDY3MjJhYWRkY2JkYjQ2MjBkN2VhMGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwYjA2YzA2ZmJhODFjMDQ3NDk3MzI5Y2Y0N2UxYjM2YTMyNmFkZjRkYWQ2ZjRjOTdjM2M2MmI2MTg2N2ZmMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiN2NlMjgxMDhjMmIyYTBlMjhmNzI3YTZhNDE1NmQ0NzRmYjZjZjdhNjFmMTNhNTExMmE0Y2Q5N2ZjMDlhODkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e52103fe550d48d9b14060d90f84cdb6",
+      "statement": "The project has lint, typecheck, non-watch Jest, watch Jest and coverage scripts; Jest uses jest-expo and discovers test/spec files under __tests__, not only unit tests.",
+      "evidence": [
+        {
+          "resource": "repo://jest.config.js",
+          "version": "repo-file-v1:sha256:a7652190caac326b8b26498570893ca59cdb1a080f3a7267ce0582647e877678"
+        },
+        {
+          "resource": "repo://package.json#L67-L71",
+          "version": "repo-lines-v1:sha256:984b2fdba78401ca833b79a25cb6bdeb65e401f45d1d468e2c6d7aab3db6997c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2Q1MGY5MTQxYWU0NzRjOGY1MmQyY2U4NzMwNDRkYzFiZTYzMGNjYjNhOWE1ZWE0NjM4ZWY5YmFlMWMwM2FlMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWMyNzViZmMyODYxMTQ2NDU5NDM1MzAzZWMyZDA5ZTU0YTg1OGIzMTQ0Nzg3ZDAwM2U1YTA4YzE2OWJiZDQxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmQ5MGM1NjI4MzE1MmY1OWQ5OGNiMzQwN2RjZjdmYmU5ZTc5N2M0ZWU5YmI5MzQzNmEzOTAyMDg1ZWUzNmUwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTRmYjliNWVkOTgxMzJmYjZkNGUyM2VmYmRmMmQwMjA4MTA2YmUzY2Y2MmQ1Y2IyMjMwYWVjMzdjYjI0OTU3MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_43f4ea59a81b4897b5c77d1e1f24a014",
+      "statement": "Tests labeled e2e include tier feature tests invoking a TypeScript harness, while storage unit tests mock SecureStore and file-system operations in memory; these tests are not proof of native OS behavior.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/e2e/tier1_features.test.ts#L1-L29",
+          "version": "repo-lines-v1:sha256:8dcf1a2c9a35f65b12b33ec51f72ce75452c3201798b14208e0da35c76218374:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjAwOTY0YTk3ODYzNTUyMmIyYWIwOTBjNjUwNjVkOGVmOGU4NWM0NzMwYmIyZWIwNDYwZDM0YzY3N2RkYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4NWI0ZTEyY2UzMDk2MTAxODNmOWNmNDJlZjM5ZjRkYTM2YTg0YmJhYzM5NGY3MWViZGVlMjFhZWJkNjlkNGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIzNGM3YjJjY2Q5MzIyOWVjZTM3YTEwZDU2NWRhM2ZlZmYyNDhjMGI0NGJhMTQ4MDhkMmUyOTlhNTY1NTVkYzQifQ"
+        },
+        {
+          "resource": "repo://__tests__/unit/storage.test.ts#L1-L52",
+          "version": "repo-lines-v1:sha256:13128f0d731fc71c2b48d833484be19388de85e30f5d523c161168e2512d46c4:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhMjEzNjNkZTkyMjg0ZTAzMTY1Y2FlZTk4YzhkZGNiODUyNjM0Mjk0NGRmNjI5ZWFjZDQ0Mjc0ZTVlODkwNDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkMTMzMjQ2MjMzMWYxYjk3ZGU4MjE5YTExY2M5MjMzZmUwM2UwNzQ4YzQwZTk1YTI1Y2M4ZmZhNzlmNTE2ZmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_165e6f80aff84ed2811d2fd72fde35d4",
+      "statement": "OTP computation uses the account contract and Base32 decoding and reexports otpauth parsing/generation, making computation and URI/secret handling related change boundaries.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/crypto/otpEngine.ts#L1-L21",
+          "version": "repo-lines-v1:sha256:ecd0367c0c974c214973f8826933fd9b2d47e5b8bc8984956c3f35063c4ece87:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzMWY0N2I2YTViZmY3Zjg1OTYwMDdkYWJlZmE5ZDU4NTJkNGM2OGZlNzdhMzExODA1YzcyZWZjNmVhNTFkM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyMzU2YWI1M2NhMjcxMzFiMzM1OWMxMDU2M2EzNGY4MGQyMzVlMDg0MjMyZmNiZmM0MGExMDdjZjQwMmUwOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzNmZkYTJmN2E0MDgzYmE3ZDU2OTcxY2I4ZjUwOTJhMGViOGVmMmViM2QwYzU1MWY2ZTJlYzA3YWU3MWI2MjAifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-10T07:14:35.895Z"
+  }
+}

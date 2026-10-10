@@ -11,6 +11,15 @@ Chào mừng bạn đến với **Simple OTP**, ứng dụng xác thực 2 bư�
 
 ## Cài đặt & Yêu cầu hệ thống
 
+### Tải ứng dụng Simple OTP
+
+Simple OTP đã chính thức có mặt trên Apple App Store dành cho iPhone và iPad:
+
+- **Apple App Store (iOS & iPadOS)**: [Tải Simple OTP trên App Store](https://apps.apple.com/us/app/simple-otp/id6816673973)
+- **Trang giới thiệu chính thức**: [KD Labs - Simple OTP](https://kd.io.vn/apps/simple-otp/)
+
+### Yêu cầu thiết bị
+
 - **iOS**: iOS 15.1 trở lên.
 - **Android**: Android 9.0 (API 28) trở lên.
 

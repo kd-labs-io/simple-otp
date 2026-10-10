@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:2e5719560b904bcd111f2c7fdff6d42f659562bc401aa20d1914924e83f612f8",
+  "claims": [
+    {
+      "id": "claim_6bb3df4155ec4c128941755d1938ffd4",
+      "statement": "Whole-vault backup is password-encrypted file export orchestrated by SettingsModal, whereas AccountQrModal discloses a single account's secret through an otpauth QR and readable secret.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/AccountQrModal.tsx#L40-L193",
+          "version": "repo-lines-v1:sha256:cc704caab0148b2641bc3fee872a99f25969738bd0c2b2fbe23d07b3d49c81ba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI0YWVjYmY5OTU0Y2YwMzIxN2NjYWE3ZTkxNjdkYjJiYjRmYzAzNDE3MGQxNGJkMjk0Y2VmZTQ2OTAwMzQ1YjFhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhYjMyOWJlMzcyZDU5YTA0NDFhYWY4MjQwMGRjN2Q1ZmI5YTg0ZjQwM2ZiMWYxMzlmOGVjMDZhNDY3NWE0NTFmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NGMxYzY3NzJkYjVmNDg1YjQ1ZmM1Y2ExNWU5Mjk5ODdhODAxZmUyYzkzYjcxMTZjZDg0YWUyOTFiYTI2ZjQ5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3Y2JjNDYyYzRjZmE4MDkzYzY5OTAzY2E4NmQ5NjJiYjI5Y2E5OGI2MjgxOTFiNmI4YzgzZTNlNmNjZTEzNjM0In0"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L212-L365",
+          "version": "repo-lines-v1:sha256:464930964cd054358525ea5d45306cf7e1abb093b73744500791e37d0a9f1c5d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJkN2VmMjlmMmJhYzQ4NDE2NWIwNjE2OTZiNTQwNjY5MWE1OWQ2ZjQ0ZDRmOGRlY2Y5MzYyMmU5NGM2ZWI3ZmRiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MmEyY2IyNWExMjJiNDQyMjFhNjIzNGVjNjYwYTdiNWZiN2Y5YmRlN2IzYjllMmIzYzU1OWEwZDk2ZmFjNzM5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1MWUzNzI1ZGEwMDJiNDZlZDhiNGRlODgwMDNhZDk3MTBkY2FmMThkNTdjNDcwMWRjM2JlZmYwYjJjNWNiMTNmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjlmOGZkOWRhMTRmZmRmYzc3YzVhYTAzNzcxYmYzNTJkZjUxOTljNzFiMDgwYTI3MmEzZTEwYTBiYzVjOGVhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_08f480078ab543578f80f66c72c37e94",
+      "statement": "Export UI requires a six-character passphrase and matching confirmation, but the backup engine and restore UI require only a nonempty passphrase.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L220-L228",
+          "version": "repo-lines-v1:sha256:f84a0d03c43f1e9dc203cb14737cc5b8422ea1c6f11f30788026123602451cae:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjlmMWJhNTE3M2QwNTEwYTk2OGE3MmFhODgzMDdlNGMxNjdmNjM3MmViYTBjOGZiZWIzMGY3NTk5ODliZTEyYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWY4MmQzZGJhOWM3MDc5NWIyYzkyODdlZGRjYjY3MTg3YTU1ZDRjZjVhOWY1YTUwODY0MWIwODM1ZjIzODM4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjlmOGVkMDVmMDJmYTNkYjJiODA1MjIzYmFkYzNmMzRkMmMwN2UwMWQ2ODBkMjc5NjhkNTM5MGRhZWMxZmRkYiJ9"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L298-L306",
+          "version": "repo-lines-v1:sha256:67939ce6290dacbe28dc55b000316dd26f4e3dacb7fe962b7aa229465f16807b:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMxNmFkN2M0MzA0ODg3MTFjNjhlMTNmOGJlMjY1NWQzNzk5MWQ3YTI3Zjc2M2RkN2E3YWFkNzE4Nzk0MWE2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTFlMzcyNWRhMDAyYjQ2ZWQ4YjRkZTg4MDAzYWQ5NzEwZGNhZjE4ZDU3YzQ3MDFkYzNiZWZmMGIyYzVjYjEzZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODE5MzgzYjU3MTQ3ODE5ZWJjNTJkNGE3YWM0ODU1ZDU2M2FiZThiNTUyYWQ2NjFkMDdlNTAzMjZiNGUyMDdiMCJ9"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L109-L115",
+          "version": "repo-lines-v1:sha256:c5cf72554ce01697aef6c4636a32b025f2d22e1fdd36aa0480709b0e7db0eb02:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE4MDkzMTUzNGM1MjQyNzcwYTA4ODc4OGIxYjA2YjI4ZGIzY2U4ZTU3YTVhZWM5NGExNGQ1MzE4MTgzY2Q3NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGEzMDEzOWFlM2E5YTA3NmE4ZTYzMDA4N2M4ZDM4OGEyNTIxYmQyNDY5ZDE5ZTNhMzQyYTZkNDkyZjc4ZTRkMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ2OWY1ZGQ3YmNkMTc4MmYyMTgwNjM5Y2UxZDBmZTVmNWVkNjQyNGM3YmZkNDRmOWYwNzlkYzZmNTVkN2Q1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM1OGRiYjVlMmI2OTIzM2IxNzBjMmI4NjZkZDk2YmJhY2EzZDM1YjNmMjIyOWQ1YmU1NWFlMzk4NWQ2OWFlYyJ9"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L173-L179",
+          "version": "repo-lines-v1:sha256:eb50a3cff021eee23fdc897a8ffe72ec89c19dd0e8830a33194bd74c5c16a39c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGJiYTUwMTAxYmJjYTkzZGQ0Y2M2MTc1NDk0NGU2NDI5NzEzNzNjMDhlMzRlYzJiOWEzNDM1MDYwOTA4ZWE1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjhlMmQ2MWI2OWQ4ZWQyNTI3Y2YwMWI2MDYwZGIzNDE3OGRlZTVlMmYzMzEzMjllYzUyMzI3OGE0NWRiMjFlMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDMyOTA2YmY1OTExYTg0NTBmMDQ4NjMyMTZiYjM3NjQ1MjYxYjhiZWZiZjExNTg5MWU5NTA0ODJlZmU2NWFkMiJ9"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L82-L98",
+          "version": "repo-lines-v1:sha256:7a17d3c498c21c9b56492808926f286ead36404c5db976eccf444ae2b1b6a7d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1YTlhMmFjZTg1N2Y3NTY1NzgwNDFmYjg2M2Q5NzM4YTg3MWEyN2JkYmFhZjNkYWMzNzA4NjVjNTM3MzBjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3Yjc0M2UxNmM5MmI5NzRhNTgzMzU1NzcxYWE4ZGY2MzY1MDY5NDZjM2ExYWM2N2NiODBiM2ZhOWViMmQyMjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjViNWE2YTY5NTA5NTZjOGQzNjNhYjcyYjhlNDJjYTNkOTMzZjZmMjhmYzQxMjExZmNjODYxNzE2ODI0Yzc1ZjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8b6401c181aa4e4cbde300afb055b4b0",
+      "statement": "Export reads all vault accounts, encrypts and pretty-prints the container, writes a date-named .simpleotp cache file before checking sharing availability, and reports success after shareAsync resolves without verifying an externally saved copy.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L233-L268",
+          "version": "repo-lines-v1:sha256:09f647741d80da59e974a99476fcc16147a469730e2c2650cdf1cac57a967b65:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExZGY4N2E0NzMxNmM3MDhjNTUwMjA5OGU5YWY2YzQ0NTM0ZWI4MGJlYWRjZjYwNjMwMjhlZmNhODU5MzdhYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxZmNkMGMxZGQzMGIyMTc1NGUyODJiYjBjNjgyNDIzYWI1YTRjYjdmMDMxYjU4NjI5ZGNhMmM1M2FjYzVkNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3YTkzMWE5Nzk2ZGU5YjBmZTI5YzJmZjdiYjIwY2VmZGViYjk0OTgyZmU1ZDU5NGE3MWE2Yzk5MTY1Y2MxMzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee03f65d08b4430dbf17aedec835be42",
+      "statement": "Backup encryption emits container version 1 with simpleotp by default or simpleotp-encrypted by option, and encrypts a version-1 payload containing export time, app name, and accounts; the crypto-path backupCipher is a re-export facade.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L102-L168",
+          "version": "repo-lines-v1:sha256:4d35f761ddc220c2bd2026ab9d1f6ed3cafe0e57fb6548b197647c2aa3985037:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhODI3MThmNGUwMGI4NDE5ZDEwMzJlMzBhOWZiZjA4MzdhOWIzZDU1NzI4MGMxNjVjNDI0NmJiNTBmYjhhMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViNWE2YTY5NTA5NTZjOGQzNjNhYjcyYjhlNDJjYTNkOTMzZjZmMjhmYzQxMjExZmNjODYxNzE2ODI0Yzc1ZjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyZTRlMjU3NDk0YTIyNzViMWQ3ZjZjYjc5ZTJmMzJiZGVkZmIyZWY0YmMwYzcwMDhhZWM3MGMxNmYxZThlNTQifQ"
+        },
+        {
+          "resource": "repo://src/services/crypto/backupCipher.ts",
+          "version": "repo-file-v1:sha256:538ae027c2c2e332962fc94a973bfb2a6dedb64405c33448b796d92aba14e879"
+        }
+      ]
+    },
+    {
+      "id": "claim_d519f4bf6e5d4d439e5d977930e58987",
+      "statement": "The backup engine uses PBKDF2-HMAC-SHA256 with 100000 default iterations and a 32-byte key, a random 16-byte default salt with 16-byte minimum, AES-256-GCM with a 12-byte IV and separate 16-byte tag, and supports encryption overrides for salt, IV, iterations, and format.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L22-L26",
+          "version": "repo-lines-v1:sha256:08c873717135f7ed4e4443fc1c2863318768663efd2bf3871a19c712a8018e71:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDlhNDBhNmE4YWQyM2M2N2MwNDgzNjIxZGNjMDRlNzA3NjEwM2RlMTBlMGFmZGJmOTI0MTcyMDE5ZTIzYmZkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzA5YjZlYTgzZjA4MzdlYmE5MmRiMmM5YTU4MjMyYWRiNTgwMjBlNmFkMGQ1NTU4ZmJjOTMxZGNhODk1OTk4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTEzMDU5ZWRhZmE4YzY2YTI2NDI5OWUwZTBjYjE4MzUzYjAxZDFlNzQyZWRjZmQwMjk2YWZlYjVjNWI5YWVkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjQzNjY5ZjllMTA3ZDUyNjYyOTY3NDVmODNjZmQwNTRhYWQyM2M1Yzc3ZjY2MTgwMDQ5MGUxZTM1MTFjMzA3MCJ9"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L82-L168",
+          "version": "repo-lines-v1:sha256:c8a6fb29533f50aa831958c8f626752cd6ae6af5da37de3ff7baa925cf54660b:eyJzZWxlY3RlZExpbmVDb3VudCI6ODcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1YTlhMmFjZTg1N2Y3NTY1NzgwNDFmYjg2M2Q5NzM4YTg3MWEyN2JkYmFhZjNkYWMzNzA4NjVjNTM3MzBjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3Yjc0M2UxNmM5MmI5NzRhNTgzMzU1NzcxYWE4ZGY2MzY1MDY5NDZjM2ExYWM2N2NiODBiM2ZhOWViMmQyMjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyZTRlMjU3NDk0YTIyNzViMWQ3ZjZjYjc5ZTJmMzJiZGVkZmIyZWY0YmMwYzcwMDhhZWM3MGMxNmYxZThlNTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d7ac2356d61240148f3a9ac301d070d7",
+      "statement": "deriveKey rejects iteration counts below 10000, and decryptBackup uses supplied iterations or the default without an explicit upper bound or comprehensive numeric validation in this engine.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L234-L235",
+          "version": "repo-lines-v1:sha256:68a62c82f984e2dcb307626b43342373e3c2687df74a101490785398c0736ca6:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWU4YmFhOTA3Zjg5ZjM5YTE3ZWIzNDRiNmYzMGQzMjBjN2M1NWQ3NGEzNmIzNTMxZWQ5Y2NmYzUyZWYxMTQ4MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUyMTExNzhhZjcxN2Y1OGI2ZDljMTAyZmUwMTc5NjNhOTRlZmQxMGUzZmU0MzU3NWQxNTY3ZGEzZjIwODE0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWRiM2U3Y2QwYzNhNjIzMDQ3NjY4MTYxZDEwNGU5OWQ4NjIwOWNhM2U3NzU0YTI1YjExOWE0OTA3ODc4MDQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWVlMzJhOWJlYWRkMzQ5Zjc4OGU0NTk1OTlkNDVlNTE1ODJkNzVmNWE2MjM4YjMwZjZmM2JlZDNiZmYyM2RkMyJ9"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L82-L98",
+          "version": "repo-lines-v1:sha256:7a17d3c498c21c9b56492808926f286ead36404c5db976eccf444ae2b1b6a7d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1YTlhMmFjZTg1N2Y3NTY1NzgwNDFmYjg2M2Q5NzM4YTg3MWEyN2JkYmFhZjNkYWMzNzA4NjVjNTM3MzBjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3Yjc0M2UxNmM5MmI5NzRhNTgzMzU1NzcxYWE4ZGY2MzY1MDY5NDZjM2ExYWM2N2NiODBiM2ZhOWViMmQyMjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjViNWE2YTY5NTA5NTZjOGQzNjNhYjcyYjhlNDJjYTNkOTMzZjZmMjhmYzQxMjExZmNjODYxNzE2ODI0Yzc1ZjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bb66a6b42ac04a9cadd08bf35392e782",
+      "statement": "Decryption accepts only the two backup format labels and container version 1, validates required sections and decoded cryptographic lengths, rejoins ciphertext and tag, and maps GCM failure to AUTH_FAILED for wrong passphrase or corruption.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L173-L248",
+          "version": "repo-lines-v1:sha256:f4a993c18987c338c97271b0be9751a7c252c0dd45e379bde130121bffed97bf:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiYmE1MDEwMWJiY2E5M2RkNGNjNjE3NTQ5NDRlNjQyOTcxMzczYzA4ZTM0ZWMyYjlhMzQzNTA2MDkwOGVhNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4ZTJkNjFiNjlkOGVkMjUyN2NmMDFiNjA2MGRiMzQxNzhkZWU1ZTJmMzMxMzI5ZWM1MjMyNzhhNDVkYjIxZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZkNjU4ZTFjNjhjMWNjYjkyZGI4NzM4NzNlNzVkZmQyNmNlMjQ5NTQzY2ZjOGQzZTJmOTBjN2E0ZTcyNmM3N2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7caf0db1f097467b90df2dd258d3c95f",
+      "statement": "Backup decryption does not validate algorithm metadata labels or use additional authenticated data for outer metadata, and always uses PBKDF2-HMAC-SHA256 and AES-GCM; the test fixture called V2 still uses container version 1 and PBKDF2 metadata.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/backup.test.ts#L42-L73",
+          "version": "repo-lines-v1:sha256:3fe035ad76f380aefd6d14c5e60522139ad8dd321f07a72d8ce5aeab84c3838d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0YmI0OTliOTUyYTUzMDhkZGIxNTAwYTgwZWNlNDBmZjA5MjU2MGQ0MTRiN2YxOTFkNDE0ODY2N2Q3MGU2MjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzZjcxZTdkNmY4MjhiMDAzYjUwYTRmNmY4ZTA0MmEyNTA0NTQ4MDc5NjA4ZWNjOThjZWVmYjdlZmVmZDAyNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJlNjM4NjYwZTdkNDFhY2NiMDQ5MWIxOGQ3MTIwODUyOGVmNDg4NzQ3MzNmYmI5YjFlNWYwYmM5YjM2ZjRjYTkifQ"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L192-L245",
+          "version": "repo-lines-v1:sha256:a58898ce1bf52540b189c7effe30b7e01a3ff197ecb03f3ea41f3a879f9d4b0c:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1NDhkODI1ZmUzOWIwMDFiYTlhNmZmNGNhMzhhMDdjYWUyMThhNzg3ZDZkMzU5MjdhMTJhYTQwNGUxMzg5ZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3ODQ0ZmM3ODQzOGMwYWFjMDA0ZjZkZmIzMGMwNzEwMWNkODRmY2Y3NWViMzA1ZGE3YzRiNDA0MmJjYWVlZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY0YmE2OGM0ZGFjZTk5YmE1OTYyMjdkMzExNmY2MDcyZTFiMGNkNjAyNWRiYzIyMjQxNjEyZDdiOTBjYzdjN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2NWUzYWFjYjMxMWU0YTlmZTBiY2IxZTlmMTkyZGI4NmVhNTQzNjI3MzlkYmQ2OTkyZDQ5N2I4MmI0OGYzMDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_87ce4121a0ab43b29fb8ceb923850e38",
+      "statement": "Decrypted backup payloads may be direct arrays or objects with accounts arrays; account validation checks id, type, name, and Base32 secret, applies defaults/coercions, but does not enforce inner version metadata, unique IDs, algorithm allowlists, or numeric OTP parameter ranges.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L250-L301",
+          "version": "repo-lines-v1:sha256:ca65e8b9ad7d5a9abb46554d8d2724fdc5a372b28508f12b2f64126aba560572:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjOGM2Nzg3ZGFhZDUxNWQ5OWE3YWJiNDRmY2EwNTY3N2YwNWExNWZkNDA2ZjAxZTQzZDEwODFjMDhhZWYwZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlYzI2N2I1ZWM2ZmQzOGRhNzJiYjI0ZTY1NDA5ODI4ZjkwYjNlNWExZDM0OWQwYjAzNmI0YmY0NTEwZTkwOWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmYjYwZTI0MTgzNzVkNTQ0ZWJlMDFhNGI4M2UwZTc3ZmQxODIxYzU5MGVhZDU0NWM1MGZiYjk3NzVhMGIzZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9056b0f465946ba84757cec3c53b766",
+      "statement": "Restore picks the first asset with cache copying enabled, reads it into state, decrypts into plaintext pendingAccounts before any vault writes, and maps AUTH_FAILED or Decryption failed substrings to the wrong-password UI message.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L271-L326",
+          "version": "repo-lines-v1:sha256:1125bca8419096e2129fc5a19308a8cc56f9a67982dd7bdaea12a2afbc43182a:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyZTExMDcwOGRlMjFjZWU3YTY0NDNlMzdhYTczNGI0NmVjYzA2YTg5YjgwYjk2Yjg2YmNmZmQ2MDhhOTM1MjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0ZGU1ODU4ZWEzYjM4ZGZmYjM2MDA0NzU5N2M0ZjY4MGQ3NTY2ZjI3MTlkOTdhM2Q2MTA3ODM2YTU0ZDM0MTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5ffeb96a64b94aecbdff2d355b5db992",
+      "statement": "Merge snapshots existing account IDs, updates matching IDs by replacing the account object, saves nonmatching IDs, and retains accounts absent from the backup; it does not deduplicate by issuer, name, or secret.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L328-L349",
+          "version": "repo-lines-v1:sha256:770d417e2cf32f44fbeca86624b97be9b91dc70121c75823ba3f14649888eb9d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMmRjMTUzNDhmZDczYmRkODI2YzRiMmFjOTkwN2U0ZmE4ZjhjN2YzMTE2OGUyYjljMDI1ZTU1OWFmNmNkZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMTEyODE1YWIxMmY2MWQxMWQ4YTlhODI4OWRjN2FkMDllOTU3NTQwMmQ3ZjRhMTMwMTdiYTE3N2E2MmQ0NDUifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L160-L190",
+          "version": "repo-lines-v1:sha256:e82aafcf298bacbdaad943a44c085b3bb6a26b42f105db22699a4c03ce2b2a0b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1OWEwMDFkYmFmYjBhNzY1NGNlMjAwMjhkZjYzZGRhYTJkYTkxMjQ5YWVjZjVmZTZkMmJjNTk5ZGFmOTcyM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlZjc5Yzg5NmZlYjFiMTc4OTM2NDg1OTIyYzAxNzIzYWMxNTk3MTY0MjMwNTFmZThjZWUxMDVmNDllNjNlYmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e55ff89e0cd4e799ffcb1140a8dc585",
+      "statement": "Merge does not extend its existing-ID snapshot while saving, so duplicate new IDs in a payload can produce a successful first save followed by duplicate-ID failure, while preexisting duplicate IDs are repeatedly updated.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L339-L348",
+          "version": "repo-lines-v1:sha256:7d1b6cc06e62c8a3abe20e98b7a055245052863e72b7362eba0e719255a6e15f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyMzYxNzEyNmMwYTQxOTk0MGIwODU2MmI1MWZmMDZhYjJlOTE1YmE4MDVlODAyYTAzNDQ1NjZjMWJkODAwMjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzYTkxY2JiZDYyODc0YWQ1N2MwNGRhODVhYmM0ZTA5MDUwYjA1MDYwMjc3NjMzYjQ4MWFlNzQ5NTIxZmMwN2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlNzQxMmYzYjhmNTFiZDY0Y2YwYmE4YjQ3MGVlYjU1ZTQwOTQwYzI5YjFlZTk1ZWVhMWNmN2ZkZGNjMDVhMzMifQ"
+        },
+        {
+          "resource": "repo://src/services/backup/backupCipher.ts#L268-L301",
+          "version": "repo-lines-v1:sha256:4cf80442d1ee9c2579675d9ba2eeac2ac3828d231d6869efbbffa11f9c3c5438:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzNTEyM2IwMGM4YTQwYjQzMWRjOWI4MDdkZDJkNjEzMmU5ZDJiZmY1YTVhN2NmNGRhY2NhN2JmMzkzNjUzNDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzMDMzYTFkZGE2ZjQ1ZDZjMjkwZGY5NGZmZmU4YWRmZWJjMDVkOWZlNzkxZGQ1MGNjMzJkMDY1ZmM5ZTVmMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmYjYwZTI0MTgzNzVkNTQ0ZWJlMDFhNGI4M2UwZTc3ZmQxODIxYzU5MGVhZDU0NWM1MGZiYjk3NzVhMGIzZTEifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L168-L190",
+          "version": "repo-lines-v1:sha256:5ad8a9d1d07e1de4ebeaef78e3aa81735ae496333795d28b4d1f0d5010d8d75f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYzU3MmU1ZmUyOWJlODg3NjViMmY0MTdlMjIzNTkyYTIwMzlkNWZkOTYwZjg5NTI3Y2U3MDM2OTYzMTAxNTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2Zjk1MDU2OWQ1MTk4ZjljNjJiY2NhODhhY2E3ZDJlNTViZTBkMmIyNzBmMTMwMTkyMmQzZWU1M2YwMmZiNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3663685b85f424ebca3e03131f45ebe",
+      "statement": "Replace requires destructive confirmation and resets the vault before saving accounts individually; reset deletes the vault file and SecureStore MVK then clears cachedMvk, with a new MVK initialized on later saves rather than immediately for an empty restore.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L328-L337",
+          "version": "repo-lines-v1:sha256:88a74342a3210cc879dee70929466254179db77cf398a79a7f3ff5e7e67a03bb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMmRjMTUzNDhmZDczYmRkODI2YzRiMmFjOTkwN2U0ZmE4ZjhjN2YzMTE2OGUyYjljMDI1ZTU1OWFmNmNkZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmMDliMjYxNDlhNzI0Y2E5ZGQ0ODJkOGZhMTc4YThiOGZhMDA0NzAzMjBhOGVlY2Y0YzRlZDU4Njk5ZTExNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlNGVhODQyN2QyMGZiZjdhMTBlZjg3YzVmYTg4OTU3MDM0NWE3Yzg1MmVlZWE2NjA1YmQ1YTMzOTZiMmIzM2MifQ"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L829-L843",
+          "version": "repo-lines-v1:sha256:157dee4883c2ff770cde4f38d4f37e80ed2d3069bbf5e8532068d8968b212120:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0Yzk1ODQyOGE4NDhiM2Y0OTdlZTY0Y2FkY2ZjNDg2YzQyNDQzZTcyYTY4YzM1NjNjYjhkNTE0NDA3ZjM5N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiZTU5NmQ5YTg0ZDZiOWI0MTBhN2JiNzk1NWRkYjI4YjZlNDZkN2MxNzAxMDM2ZTgxMTNjNDFlNjMxZmE2NTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUwMjI0ZWU0NDk0MjgxZjhkNWNjMGI1ZmNiNDg0NTQxZjRiZDBhNzczMTgwNmUyMTYwNzg1MTkzZmEzNmRlODUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3Y2RiN2JiZDdmNWJjZmI1MDY2YWMwOTFlOWUzNGI5OTg1YWM2N2QxZDM4YjczOTFiNzJhNGQ4MzlmODNiZjkifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L250-L258",
+          "version": "repo-lines-v1:sha256:eaae0d7190e7bc9de2817a0d97144e57f9e022996eb4958a60cfc17836066784:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg4NjhhMDY3NDgzNGY4Y2E4MjY1YTk4OWNlYWY5YTcyZGRlMTJmYTNhZDAyNjI2ZWVjZjNhN2NhNjIwMmJkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjJkMTFjYWY0M2U5N2VmMzY5ZTZiZWVkMWEyNjhiZDA1ODM4ZjI5YjlkZDI1NGJmNjliYTY0ODg0MTQ3MjM0YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmEzOWFlMDg5MmVlYTVmMjBkMDg2ODY2ZTZmOGU1N2E0MzA2Zjc3NTBjZGRhNTA2ZjI0MWU5Yzk5YWQyYTAyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmI1ODBlOTY0ZjgzYTQ3M2Y0M2Q0NDM4NDYyOTQ5ZDY4YjU2MDBmZGE3ODdmMTYzNzQ1ZDAwZGU4OWNiZjM2YSJ9"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L53-L87",
+          "version": "repo-lines-v1:sha256:593d3f9db73674a6159004f9a6bc6e0e239664bcc855c8aedf956df6ae7026d9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5ZTEzYTAxMWYxOWZkN2NiOTAzNmE4ZDFjMzhmM2U2M2U4OTk5ZjU1NmY3OWIwNzkzNzcxMWNmNDcwYjZkOGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3MzBjMWFmNzM2NjNmMmFhNTI2ZWRmMGRlMTljYTA0NWExZWE0NjU4M2ZjNDA0ZWI2ZDJmZjY5NjM1NTc1MDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlNDA4ZWQwOTgwYzk5OGY2OTM3ZmIzMTk3MDhlOGY5YzIyOWMyMWIxYWI0NTQ5NmI5NTg0Y2RkNWQwYjExNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzkyMmUzNWJjNjMzYjQ3ODljN2FhZGMzZWZkYjA1YzMxZDQ3ZWFiNmJiZDBmMDJjYmUxNWYwMTIzYmE3MTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c15d8b8182744ea48c6a7da97d9a323d",
+      "statement": "Vault writes are serialized per operation and each save/update persists the account array, but restore has no encompassing transaction or rollback and can leave partial merge or replacement results on failure, including reset failure after file deletion.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L328-L365",
+          "version": "repo-lines-v1:sha256:5c57f13296edd0324dda0a4c8b978ab397ccda5e09da4958051e56dd3ed59224:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMmRjMTUzNDhmZDczYmRkODI2YzRiMmFjOTkwN2U0ZmE4ZjhjN2YzMTE2OGUyYjljMDI1ZTU1OWFmNmNkZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxZTM3MjVkYTAwMmI0NmVkOGI0ZGU4ODAwM2FkOTcxMGRjYWYxOGQ1N2M0NzAxZGMzYmVmZjBiMmM1Y2IxM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ2OWY4ZmQ5ZGExNGZmZGZjNzdjNWFhMDM3NzFiZjM1MmRmNTE5OWM3MWIwODBhMjcyYTNlMTBhMGJjNWM4ZWEifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L128-L190",
+          "version": "repo-lines-v1:sha256:4c845268005266697b4c1a82bf95d471bcc76aa225854164e5221cbc55c8a4ae:eyJzZWxlY3RlZExpbmVDb3VudCI6NjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZGE5M2MxMjQ2ZWU3Y2QwMmJmZDk0M2YzMjk2OTE4NDYzMWQyYWNlYTJmMzEwMzZjNzg1NmI0NDMwYzcyMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhNWU5NWQ5Mjc0MThjNzhhYjNhMGJiNjM3NDYxM2EyYzRmMGYwZGE1ODgyOGZiN2RhZjJiNjVkMWY4YzVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L250-L258",
+          "version": "repo-lines-v1:sha256:eaae0d7190e7bc9de2817a0d97144e57f9e022996eb4958a60cfc17836066784:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg4NjhhMDY3NDgzNGY4Y2E4MjY1YTk4OWNlYWY5YTcyZGRlMTJmYTNhZDAyNjI2ZWVjZjNhN2NhNjIwMmJkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjJkMTFjYWY0M2U5N2VmMzY5ZTZiZWVkMWEyNjhiZDA1ODM4ZjI5YjlkZDI1NGJmNjliYTY0ODg0MTQ3MjM0YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmEzOWFlMDg5MmVlYTVmMjBkMDg2ODY2ZTZmOGU1N2E0MzA2Zjc3NTBjZGRhNTA2ZjI0MWU5Yzk5YWQyYTAyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmI1ODBlOTY0ZjgzYTQ3M2Y0M2Q0NDM4NDYyOTQ5ZDY4YjU2MDBmZGE3ODdmMTYzNzQ1ZDAwZGU4OWNiZjM2YSJ9"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L42-L47",
+          "version": "repo-lines-v1:sha256:5b8daaae48482a5cc72c52c57b7f7ec08b8538db86b21927f0848053d1ef372f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTllOTJmNjFhMDczOGVkZWU3YTM4MDc3ZmQ0OTY0YjdlYWE5ZDQwZjdkZDI4MTBmYWM2OGZmZWEzMmE4OTUwYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2FjMDliZTI4NDYwY2I5NTI1NGMwMjJlMjc5NjI2ZDlkN2ZjNjAwYTlhZWE3MWFmYmU1ZmE2N2Y0MWExMGEwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmZhOGFmZDljNTNlNDg5NzMzZjU0YTczOTEyYTA1Njg2YTRlZmI3NjFlZThkNGViZDA5N2QxYmUxMTRlNDYwMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3bdda80296c64c559384599e5b04ccd2",
+      "statement": "Only successful restore application clears pending accounts and file content and calls onAccountsRestored, wired to Home refreshAccounts; errors only alert, and strategy controls have no apply-phase busy guard.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L488-L494",
+          "version": "repo-lines-v1:sha256:883c503f3000c635aae58bef8acfeb6cb5a8e93942a613d1986a878f496c8bf1:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2YjlhZGQzOGQ3ODdmODYxOTMzYWRjZTRlOTM0MjQwYTFlY2I2MWJlYjcxOGQ1ZDgwMWM5NGNkNzVjZGE2MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWIxMDYzYzRkZWE2OGEzODE2NjExMGJhZDJkMzM4YjRkNzJlMDJkMzdiZTA4MTVhNzg0NTFlOTkzMzJkNmRmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWU0NGU5MzBlMWI2NmI3MzJlMzNkZjgzNzM5MzI0OGE4MDU2YWRlMWNmMDY3YThmYTRhYmVhN2FjMmE2MWNjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjJiM2RlMjQwMjllNmY2MmVlNDIyMGU1NmEwY2ExOTczNDkyMDk0OTZlM2RiNGU2OGViYjA2MDQ5ZDQ3ZWMwMCJ9"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L351-L365",
+          "version": "repo-lines-v1:sha256:77947aac8fde8605711c25fffcad4717f281e32ec0b3b0684dcfb158ba6026cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2Yzk5MjUxNTBjYTNjOGRkMjU4ZDY2ZDk0MmFlYTdkZGUyNGExMDc0YjNiMDgxMzg2OTkxODhhMThmYjhmY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTJjYjI1YTEyMmI0NDIyMWE2MjM0ZWM2NjBhN2I1ZmI3ZjliZGU3YjNiOWUyYjNjNTU5YTBkOTZmYWM3MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxMzQxZDBjNTg4MmU5MWE2NmM2MGNiODYwMjBiMjQ3ZjBhZmMzMzZjZGY3NmMwYWUxOGJjZDIwYWM4ZmUxZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ2OWY4ZmQ5ZGExNGZmZGZjNzdjNWFhMDM3NzFiZjM1MmRmNTE5OWM3MWIwODBhMjcyYTNlMTBhMGJjNWM4ZWEifQ"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L802-L866",
+          "version": "repo-lines-v1:sha256:2a1d96a523b52c51debd2b37765c12a5e31a061a93fe5850dae513c22da40aa9:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzNmVlZGE4OGYyYTY2NDZhNjcyZmY4NTY2NDliNzg5MjlmYzExYTU3YWM1YjA1NjQ5MWU2ZjQxNDQ5OTVjNDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4ODNlODNhNjM2NzFlMjhjOTVmZmVmZjA2NTA3ODE3MzU1Mzk3OTBlNTU4MTU1YTk1ZGZiYzJlYjA0ZTQ2NTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxMWU3NzhiYjAyYzhjMmM1MWI2MWUwMjNiODcwOGE1OGJlNDU4Y2Q4NDFiN2Q3N2M3ZDkwYzA0NmUzODdkNWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg4NjlmOGYyNDRlNDBlYzc5MDdmMzEyYzlkZGZkYzc4NDUxOTdlNTI4MzYwYTg5MzIxOWNmNzU5MDA5MDZiY2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c55a34959a1d483ea56e99b0fe5283c7",
+      "statement": "generateOtpAuthUri encodes the account/issuer label and normalized secret, emits nondefault algorithm/digits and TOTP period or HOTP counter, and does not transfer backup IDs or creation timestamps; generation failures hide the QR behind an error message.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/AccountQrModal.tsx#L111-L123",
+          "version": "repo-lines-v1:sha256:587ac2bed6c566f77140f1ebe199f0f78ad341b2a6c2239007faa85c7727e143:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkOTNkZjQzYmQ1NzNjMzY0OWU0NGMwOWZkYzQxOTllMTFhYmE3YTJkMWUxYWVlMTJhMzBhNzg1MTY0MTdmODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1ODFlNGYzNjBiYWVhZjY5YTUwNmIxZDIxODlkMzIwODYxNGIxYjM1NmM2N2Y0NDk4NGM4NTdiNDY4NGU5ZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5ZjIzZWM1NjE4ZmNhMTZkOWM1NjUxODhmMmQ4ZjBjNTczMDllZThjYmNiY2VhNTllZDcwZWJkZjk1YmRjMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE5NTAzMTQ0ZjNiYzE1YWQxNjRiZmIwMWQ1MzNjMjU2NGQxNzZhMTM3ODRhNWZlZmM3MzRjODhkNzNiYzFhNzIifQ"
+        },
+        {
+          "resource": "repo://src/components/settings/AccountQrModal.tsx#L40-L48",
+          "version": "repo-lines-v1:sha256:a3c0b33be429a00bd657c5af8e8ea2796b01b638173c9c5e0f020f068c5bbd91:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGFlY2JmOTk1NGNmMDMyMTdjY2FhN2U5MTY3ZGIyYmI0ZmMwMzQxNzBkMTRiZDI5NGNlZmU0NjkwMDM0NWIxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhjNWJjY2JjNTI3Yjg3MjcwZjNiNzY0YmE3ZWIwZWU4ODVjMmM2ZDY5Y2FmNDFhYTZmOWY2ZDVlMWZlN2VlZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzRjMWM2NzcyZGI1ZjQ4NWI0NWZjNWNhMTVlOTI5OTg3YTgwMWZlMmM5M2I3MTE2Y2Q4NGFlMjkxYmEyNmY0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2UxYTdhMjY3NTc3YTg2NTkwMGVkYzE2NDI2MzQ0NTdkN2IxNmJiZTUzZTU5M2EzN2E0NDc4ZGE4M2VhOWM1NCJ9"
+        },
+        {
+          "resource": "repo://src/services/otp/uriParser.ts#L191-L243",
+          "version": "repo-lines-v1:sha256:a53589fd8cbda9525d293daae4e1b3c376fea00473ccea28946ad7188708ca6d:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzMjg5YTI1NzlkZWI1NDMyMGM0MGQ5ZTkyZjkyNDZiZmYxMmQ4NTcyZjc5YjNjYmUyY2M5ZjA2MGM0YTIyN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhYjFhZDhlMmNhNWFmMWE3NTk5NGUyNzVkYmNmMjIyYmFmNWQ4ODMwZmMyMTUwOTE5NmJhNjU4ZjI1ZDY4OGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7dec77f72f6465295644cfad5735d00",
+      "statement": "QR secret copying strips whitespace and uses best-effort clipboard auto-clear with a 30-second deadline, conditional preservation of replaced clipboard content, and foreground deadline handling; the modal's two-second timer only resets copy feedback.",
+      "evidence": [
+        {
+          "resource": "repo://src/components/settings/AccountQrModal.tsx#L31-L67",
+          "version": "repo-lines-v1:sha256:c2b6eb5b8ac3acf9dedcf867a19194066f79c3c604e20586dd876335e5044e69:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzMDdjMDg3YmI5YmQyYzU1NDNhNmZkMjY0M2EwZTRiZTdmZGIyZTZhNTlmOWIzMTgzYzVmZTE0NWQ1MzNjN2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlYjkyZjlhOGUxZjk0NDJkMWMyMjcyNjQ2NDZlZWY2ZTMwY2Q3MTg2ZDQyYjYyYzk3ZDRkNDU5NjllODY3ZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViYjYzNTg1MzNkZjg4MWRhYzQzZWNkNjFmNWE2MjFhODUzNzliMzU1NDU2YjdmMDMzMWI5ZDBlMGY2ODE5MjkifQ"
+        },
+        {
+          "resource": "repo://src/services/security/clipboardClear.ts#L13-L145",
+          "version": "repo-lines-v1:sha256:323038bd0ed4a4380a04bde1ee67782da8af7630d0a345b51e1310b7293cb0e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmYmYwNDNhYzlmM2RkNWIxM2Q3MWZmNDljMGIyZTU1YmYyMmUwNjk1YjVjYjlhOWFlODBkZGU1ODgzMmQzOWEzIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyN2U1Nzg4ZDVkOWQ3M2QyNGE4MWRiYzBhNWE3NGJmYTgyYzljM2IzYWY5OWU1MmFmNzk2ZTkwYjQ2OGE4YTNkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlODkyNjZmMTdiYmQxNGEzOWMyYjdmYjNiMDA1ZTYyZjhkNjE2MTQxN2UyNmI2MDMwMGViODkzYzU4MWU2YTlkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmZmNhNTc0ODBlNzM4NWUyNGE0ZDllMGM4ODdjMDdmYmI1MDEwMTJlNmMzYjQwZWY4NmZmZjViYjFiYjc4YTdhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_0069dc5b9c1344f7ab9df43be9fe5257",
+      "statement": "Backup handlers do not explicitly delete export or picked cache files; hiding/cancelling dialogs does not clear password or restore payload state, while next-start resets and successful-apply cleanup clear only specified fields; Home QR close clears its account reference rather than guaranteeing memory zeroization.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L481-L486",
+          "version": "repo-lines-v1:sha256:d44fb2bb8732e659eb6e62f6ca9d7452fd68551abcbc10f087f4152eb26c8f4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFhOGMzMjRlMDZkMjdiNzYzYzQ5MjEwNGVkOTA0ZmI5N2JhY2U0ZDczMjk1NjlhNzVjZTVhMTI1MjM4M2I0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWIxMDYzYzRkZWE2OGEzODE2NjExMGJhZDJkMzM4YjRkNzJlMDJkMzdiZTA4MTVhNzg0NTFlOTkzMzJkNmRmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDIzY2YwMzBkODQ4YWI2MTUxMDYxOWVhODM0OTg3ZmU3MDU4ZGE0NTJiOGVkNzY3MTBjMzk5ODdlOGE4ZTEzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDZhMzRlN2RmMjRmYzAzZDM2ZTI1OWFmNWRmNjUyODU4MmRhZDc4ZmUwMzI4ZWYxODQ1NzVmYTc0ZDVlYzllNyJ9"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L212-L365",
+          "version": "repo-lines-v1:sha256:464930964cd054358525ea5d45306cf7e1abb093b73744500791e37d0a9f1c5d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJkN2VmMjlmMmJhYzQ4NDE2NWIwNjE2OTZiNTQwNjY5MWE1OWQ2ZjQ0ZDRmOGRlY2Y5MzYyMmU5NGM2ZWI3ZmRiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MmEyY2IyNWExMjJiNDQyMjFhNjIzNGVjNjYwYTdiNWZiN2Y5YmRlN2IzYjllMmIzYzU1OWEwZDk2ZmFjNzM5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1MWUzNzI1ZGEwMDJiNDZlZDhiNGRlODgwMDNhZDk3MTBkY2FmMThkNTdjNDcwMWRjM2JlZmYwYjJjNWNiMTNmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjlmOGZkOWRhMTRmZmRmYzc3YzVhYTAzNzcxYmYzNTJkZjUxOTljNzFiMDgwYTI3MmEzZTEwYTBiYzVjOGVhIn0"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L727-L734",
+          "version": "repo-lines-v1:sha256:c60757ee0834dbfd7037e25e4eb9c3e685ba790f7763f5fe2a29ad27248c4f01:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAxYTg4NTQzNDc0MTYyOGNmNGZlNjc1ZmM2OWY3YzM4ZTM2MThkYjMxMzlkMmFkNDFkOTNlMjA2ZWUxMTMxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGZiMWM2NTRkNjY4YjRmYTMyZGFjNzkxMTAzZGIyOWRiNTExMmIwNjc1YjRhN2MyMmUzZTY5NzdhNmUwNWExYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FjMWMyNWQ3ZDM2NjgwOGYwYzdmYmU2OGIzZjQzOTM1MmFjNTIwY2FkMmY3YTVjNTEzMjc1MDI2MWEzNjUxMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzEzYjY4MGEwMWRkNmQ4OWRiMzk4ZTcxYjdjOWQyNjUxZmIxMDFkM2NhODYxZjExYThiNWFkM2I2YTI0OWViOSJ9"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L776-L783",
+          "version": "repo-lines-v1:sha256:9190d6c24e8457778575fbdbfb677982d575e9c154a6e471e2efd5c90d24c01b:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAxYTg4NTQzNDc0MTYyOGNmNGZlNjc1ZmM2OWY3YzM4ZTM2MThkYjMxMzlkMmFkNDFkOTNlMjA2ZWUxMTMxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGZiMWM2NTRkNjY4YjRmYTMyZGFjNzkxMTAzZGIyOWRiNTExMmIwNjc1YjRhN2MyMmUzZTY5NzdhNmUwNWExYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODdiMjgxNWRjMzI2MzI2YWNiODVjNGVjMTEyOWQ4NzIyMDk3MTU5N2UwOGZkYTliOTcyOGMwN2I4NmRmNDJkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzI5NGE0MjEzNjI0YzhhNTIzNzJjNzA2MTNmZjE1ZWIxNmFmOTkzOGZjNTE4YzMwMjIwZDM4NjZjMmMwNWM1ZCJ9"
+        },
+        {
+          "resource": "repo://src/components/settings/SettingsModal.tsx#L858-L863",
+          "version": "repo-lines-v1:sha256:3eaaf38548a7d5475447108e1e58d2736fae6e812c0adcfbbca490960f691c4a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTRjOTU4NDI4YTg0OGIzZjQ5N2VlNjRjYWRjZmM0ODZjNDI0NDNlNzJhNjhjMzU2M2NiOGQ1MTQ0MDdmMzk3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzIzZTM1NmQyNzhkZmIwNWM4MjA5NjNjYTRhYjA3MTQyZDczOWJiNGUwMjY4NTVjMWI4ZmVmOGQ4N2Y5OWRlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTAyMjRlZTQ0OTQyODFmOGQ1Y2MwYjVmY2I0ODQ1NDFmNGJkMGE3NzMxODA2ZTIxNjA3ODUxOTNmYTM2ZGU4NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDQ4YmEyNTVhYTdjZWE2ZmUzMzY3YWJlOGY4NmRhNTlhNzM4MmU5MzE5ZWE3Y2Q1MDM0NTk3ZGVmNTU0NWJlYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_df9e819696fb425486d184b227bb0119",
+      "statement": "Focused backup tests cover deterministic derivation, alternate-format decryption, round trips, empty/Unicode inputs, tampering, malformed containers, invalid Base32 and facade exports; SettingsModal tests cover mocked export sharing and new-ID merge refresh, while AccountQrModal tests cover visibility, QR details, secret formatting/copy and close rather than erase guarantees.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/AccountQrModal.test.tsx",
+          "version": "repo-file-v1:sha256:e862acd8e95fb58d99e408e312979cfda74f66ef9bba8af892ec3bea55392089"
+        },
+        {
+          "resource": "repo://__tests__/unit/SettingsModal.test.tsx#L161-L253",
+          "version": "repo-lines-v1:sha256:86186c25cd1262e44bac6808d4c3bc88db0502f2c6b5f8af67aaa7f314add1c3:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMDA4OTUwMGMxMWJjMTU5OWEzZmIzOTg5ZjIzNTIwZjRjZjk1ZjY5MmUxYmYyMzdmYzc1MmU3NmZlMmQ4M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMzZTdmMTZhMGJjNGMxZjEyOWU3MmMzYjI2ZGRiMjcxYjFlYjY4ODc3OGEwMDg2ZGJjOGNmNjhkNTlhNTA0NGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkOGEyNzk2ZTE4MzBiNzFiZjRjMTdlZmE0YTZhMWNjMDY4MGRmZTdhYTAxYmYzOGViMGYzMDkxYTk5Mzg4ZmIifQ"
+        },
+        {
+          "resource": "repo://__tests__/unit/backup.test.ts",
+          "version": "repo-file-v1:sha256:56bcdecc3803ccfc04211b876d35c04971fe98f3ddcdbfccdb2452f132d8be12"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-10T07:14:35.895Z"
+  }
+}

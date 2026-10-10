@@ -11,7 +11,14 @@ Welcome to **Simple OTP**, an offline, open-source 2FA authenticator designed wi
 
 ## Installation & Setup
 
-### Requirements
+### Download Simple OTP
+
+Simple OTP is officially available on the Apple App Store:
+
+- **Apple App Store (iOS & iPadOS)**: [Download Simple OTP on App Store](https://apps.apple.com/us/app/simple-otp/id6816673973)
+- **Official Product Showcase**: [KD Labs - Simple OTP](https://kd.io.vn/en/apps/simple-otp/)
+
+### System Requirements
 
 - **iOS**: iOS 15.1 or later.
 - **Android**: Android 9.0 (API level 28) or later.

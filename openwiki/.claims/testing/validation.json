@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:7fb2310a7120f74ec0e95b20b6ae6da913a7214097ed64b9aac333e6033f59b8",
+  "claims": [
+    {
+      "id": "claim_f953ca8ff4ac40e2aba3759d4b0db86e",
+      "statement": "Jest runs with jest-expo, setupFilesAfterEnv, @/ and asset aliases, native/Expo/noble transform allowlisting, and source coverage collection excluding declaration files; it defines no coverageThreshold.",
+      "evidence": [
+        {
+          "resource": "repo://jest.config.js",
+          "version": "repo-file-v1:sha256:a7652190caac326b8b26498570893ca59cdb1a080f3a7267ce0582647e877678"
+        }
+      ]
+    },
+    {
+      "id": "claim_23a66f14a0bc48aeab1cba242cbaeec4",
+      "statement": "The package scripts provide non-watch Jest tests, watch mode, coverage, expo lint, and tsc --noEmit typechecking.",
+      "evidence": [
+        {
+          "resource": "repo://package.json#L61-L71",
+          "version": "repo-lines-v1:sha256:9afc0c8c8cdbb03a1f7cdb7b84d8ba8f2e0dd41eab223d3a12123ff398cc0436:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ODMzZDU5NDljMDNhNDBjYTk1MjQ5MTYxMGE2NjU5NjQ0YjNhYTQ2NjM2MmY3OTkwMjBkYmYxOTgxNTQ3ZGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMjc1YmZjMjg2MTE0NjQ1OTQzNTMwM2VjMmQwOWU1NGE4NThiMzE0NDc4N2QwMDNlNWEwOGMxNjliYmQ0MTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlYjE0ZTc1ZTY4ZWE5M2YwY2U3M2U0MDYwNzU5ZjcyYjU2ZDQwNzY4MGE4YjkyYWNkYmNmZGNlMzM1ZjZmNjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ZmI5YjVlZDk4MTMyZmI2ZDRlMjNlZmJkZjJkMDIwODEwNmJlM2NmNjJkNWNiMjIzMGFlYzM3Y2IyNDk1NzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5acc6ab07555458691c2ff28b1b74555",
+      "statement": "Jest setup supplies Node Web Crypto when missing, initializes i18n, and mocks lucide-react-native icons as Views rather than native icon rendering.",
+      "evidence": [
+        {
+          "resource": "repo://jest.setup.js",
+          "version": "repo-file-v1:sha256:67f41ca66c935d137af1061c94fa3f653705b98d1e883e84397ffefb81d4340e"
+        }
+      ]
+    },
+    {
+      "id": "claim_f22b517a17a14d8f9792b1ee6c801e87",
+      "statement": "testHarness dynamically loads four service modules at import time with eval require, catches every loading exception as null, and delegates individual helpers only when the requested production export exists, otherwise running reference code.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L236-L256",
+          "version": "repo-lines-v1:sha256:0dc6a438ccf1b3ea2141806faa16bdc73610900f84943fc5cf01730a2d95f5cb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4OGM0M2QzZjBlNDdjZDdiMWYzOTk4OTI4ZjdhMWQ3NzA4OTRhYWI1NWMwMTM4ZjYyZGVlYjg1ZGNhNzFjZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1YjJiMDRjMGU3MmNhNDcxOWU2YmRhNWQ1MDdiN2FhMzcxNmZjMTcxZGY2NDg2MGQzZWU2OGE0ZTZkYmU3YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4MDE0ZjA5YjUxYTg3NDk3NTFiNDQ3MjcxZDY1Y2EyNmI4MDRmYTcyYzUxMjljNGMzN2RmMDg1YTQ3Zjc5MmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ODUwZTcyYTNkYTU5OWYxOWFiZDA1MWIxZmE5M2MxMzAzMzg2MTIyMDY5NTdmZWY4YjY4YjBhMWIxMTU3OTEifQ"
+        },
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L479-L480",
+          "version": "repo-lines-v1:sha256:a0ca83216144c5a755f948cd4248ace737b0d173976b02dbb092f65ce241d270:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MjRiMWUzYzc0OGI0ODMyMmQ4ZWIzZGQ0ODNlNzk0M2ZlNzAwNGIyNGIzMTlkZGNjZjQwZWI1MjA5YjI1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzdlMDc2MjQ5NzIyYzQzNTFhNmMyNzZmMzU2NjM0YTc3NGU5NTg4NmIzZmE5MTFkNGU5ZDE1MWQyNGQ2MzIyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDQ0NTIwMzM2MjMwNzY2Mjg1ODNmN2ZhMmEyYzcxOGJhY2RjMjE0YWQyZjZmNjYwYWYyYTIxZTAxNmVmM2Q0NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWE1MWE0NWZkMjRhNTVkZDJhYmY4Y2RhN2VhOWUzYjEzMzIzNjgxZThjZGE4YmEyOWU0NTVjZTlkZGU0YzI5OCJ9"
+        },
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L592-L605",
+          "version": "repo-lines-v1:sha256:5fdf1a79be8663a8b646c187d0e723e354ce9ab7f1df0675364047e826897c13:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMzkwZDk4ZGNmOTU5ZTUxNTExZWUwYmUzNjI3NmExNDg5MzRmMDBlNjM2MmM4NTRmNmE3YjYzNzFkNDE3MzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMGNkYjk3MmE3YmZiN2VkMjQ2ZjlmZjY3MjM4NWU1NWY0OTY4ZmMxMTA0M2RjNWI2ODRkNTFkZmEzMWRiY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlOTkxN2IxNjNlZDcwNjYwYzE2YWMzYWJlMWQyY2FlZjY3NTZiZDJhYzA0NTQ0NGI3ODUzNzc4MjM1ZGVkMzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwOGJlMDdmMjMyMWNkZWQzZjEyYmJjYTI1ZDJjNzEyOWMxNWVjZjU1OTViMzFiZTE1YTUyMDJjMzBhMDE4YTYifQ"
+        },
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L60-L88",
+          "version": "repo-lines-v1:sha256:09931d868e74df4c48487be39095ec311f8ddf2c7f5775d76cf74ba5e5b224b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiOTM5Mzg3OWUwMjkwZDZmZTI4YzI1MjM1OTU0NjU0NDNkYzJhNjU0NzUwYWViOTUxMjY4MTdiYzUwMTU2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5YTZiZWQ3MGUzMzdiMTUxZGM4YjMwM2JkNGE3ZWNlMTQxZWY3YjY4MmFjMDIwNzQ0MzNkM2I5M2E5YmFmYWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMyZGFmYzQ4NjIwZmNmODY2MDQxZTQxNzMzMGI1NWE3ZWEzNmJlYWViZWYxOTc3YTEyZjg3MGM0ZmY4N2I2OGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8dfea132e26949b9942e9e461af58529",
+      "statement": "The harness vault factory falls back to an in-memory Map because production vaultStorage exports VaultStorage and vaultStorage rather than createVaultStorageService; this fallback simulates initialization without encrypted file persistence.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L592-L660",
+          "version": "repo-lines-v1:sha256:154cfe237b7da06045a9980a6f5ee4f62912eac8978e7014d57c54ebaa146413:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMzkwZDk4ZGNmOTU5ZTUxNTExZWUwYmUzNjI3NmExNDg5MzRmMDBlNjM2MmM4NTRmNmE3YjYzNzFkNDE3MzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlOTkxN2IxNjNlZDcwNjYwYzE2YWMzYWJlMWQyY2FlZjY3NTZiZDJhYzA0NTQ0NGI3ODUzNzc4MjM1ZGVkMzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4YzBlYTU0ZGE5NDA1YjZiY2E3MGM3YzRkMmY2OWY4MGI2MjZjMGMyZTI0ZTk0OGE3NDQwZTExYjZiOTJkZTAifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts",
+          "version": "repo-file-v1:sha256:9dee0a87ded81faef3d4a1f94e73b3eb5484231203c6b885e9e312f169e72514"
+        }
+      ]
+    },
+    {
+      "id": "claim_a05c65ecbc4c4729bab40d3a241b6358",
+      "statement": "Tier 1 feature tests import the contract harness rather than a device UI entrypoint, while the RFC6238 unit suite imports the production OTP engine directly and asserts official vectors.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/e2e/tier1_features.test.ts#L1-L49",
+          "version": "repo-lines-v1:sha256:1f19378f8d24c36e6ae3e8a07aae6849f6f2e1c4bf187865b4a86a962d03c760:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjAwOTY0YTk3ODYzNTUyMmIyYWIwOTBjNjUwNjVkOGVmOGU4NWM0NzMwYmIyZWIwNDYwZDM0YzY3N2RkYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3YzVhNGZjNjcxMzQ4OGI0N2IzNmVmYzI0NWE5MmU2ZGIxNDMwODk3YjVmMTNkZDkzNzFjMjExYWFkMWM5YzcifQ"
+        },
+        {
+          "resource": "repo://__tests__/unit/rfc6238.test.ts#L1-L45",
+          "version": "repo-lines-v1:sha256:712df59d9191c52f8a1fa634f001499e49b2e20c3f6da933472e5cf48cc705fb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjAwOTY0YTk3ODYzNTUyMmIyYWIwOTBjNjUwNjVkOGVmOGU4NWM0NzMwYmIyZWIwNDYwZDM0YzY3N2RkYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NTkyODBmNjE1NmMxZjY1MWI1MjJiMWIxODYxNjNiNjZkYjQ1YWRiZmE5YmM2NzFiZWQwNzM1MjllZWMxZDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3OGUzMGI2ZGViOTE2YzA2MjRkMmVjZDQxNDFlNjFmZDA4ODFjMGIxOGNiNjMyY2FlYzg0MzQ5MmI2ZjM5ODMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4a376950310a40f2ad22579f43bf1246",
+      "statement": "The harness provides local biometric and privacy shield simulators and a NetworkBarrier intercepting only global fetch, which are distinct from native authentication and the multi-API production NetworkBlocker.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/helpers/testHarness.ts#L662-L794",
+          "version": "repo-lines-v1:sha256:22e3be09a189438f5ab4f5697b959517ad8b348b896e74659ebcb0d4621c5fd0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmMzYxYjA2ZTdlN2IyYmMzMGQ3Y2E4MmEzMTc5NWNiOTU5MTM2MTI0M2Y0NWYyZTQ4NzNiOWU4OGYzM2FkOTg1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5MjA0MGUwOTVhOTRlMmFkYTc0ZTQyMWYzNzE4NzUxYTkxYTgxMGJmZDY2ZjQ4ZjRlOTM5YzdiNzQ4MGViNjcwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/services/network/networkBlocker.ts",
+          "version": "repo-file-v1:sha256:138eab5a914a227105b24a224a38d3b5f46358ddfe1328cb57996f13dbcfd883"
+        }
+      ]
+    },
+    {
+      "id": "claim_6108c16992154e68a90e3fe4f5f07af3",
+      "statement": "Storage unit tests exercise production VaultStorage using Map-backed SecureStore and file mocks and a deterministic HOTP_${counter} mock, so their counter output assertions are not OTP cryptographic verification.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/storage.test.ts#L1-L78",
+          "version": "repo-lines-v1:sha256:29d4a5dd41e7d77bde2101383bae8abd0cfc7ca0fc9a9f2482b1e601a35d5b04:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhMjEzNjNkZTkyMjg0ZTAzMTY1Y2FlZTk4YzhkZGNiODUyNjM0Mjk0NGRmNjI5ZWFjZDQ0Mjc0ZTVlODkwNDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZkYmZmMTU4MGZiYzY4NTBlY2FmZmFmM2YwOWQ3MWJhMmJiMGRiNTg0MzJhZjQwNGQwMTY3ZmI1ZmNmYThkY2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c7f375b9c1a04afcb3006d6d5475ae0d",
+      "statement": "The Tier 5 crypto/storage hardening suite directly imports production backup, vault, ingestion and clipboard services, while mocking native storage, clipboard and AppState; it covers corrupt envelopes/MVK, cold persistence, 50 concurrent interleaved writes, ingestion write failures, and clipboard resume/preservation cases.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/adversarial/tier5_crypto_storage_hardening.test.ts",
+          "version": "repo-file-v1:sha256:ccd0ecf4b7b98b162ed5f219a84956c60a53a3888db4c104e4b23904aa93a3bc"
+        }
+      ]
+    },
+    {
+      "id": "claim_ef5e4994ebc545748993c690ce8f4a5d",
+      "statement": "Production VaultStorage serializes writes with an instance-owned Promise queue, a boundary narrower than multi-instance serialization or crash-safe filesystem transactions.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L210-L228",
+          "version": "repo-lines-v1:sha256:ccc496c22bc9b9138225c71d0d4dd24a8926fe70337ed0615b9fdd680c879157:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiNmI0N2QyN2Q3ZjkyMGQzYjlkZjg3YjI0ZDcyZTgzNTlmMzBlYzFkNWQzMmY5NDg1OWFlMWJkMWU5MTQxNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwNzJmZTJlNDRjNTUyNmMwNTE2NDU4N2M5MTlmYTM2YzRhY2EyNDBiY2UxOGI1NWJlNTVjYWYzZmNiYzczMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        },
+        {
+          "resource": "repo://src/services/storage/vaultStorage.ts#L34-L47",
+          "version": "repo-lines-v1:sha256:34cde40771ae021bf0afad894c4b3ef3147df56cc92dc79c11e7fa08eb97c7fc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxYThhYmJmODYxMzliZThkZGZhMDI0MmM4Y2UxMWE1MWYxZDU2MjQ0NTQ0ZDcxN2JiNTgyMTQ4ZjUwYzZkMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0OWMwMThkMGQ5MGNiZmE5ZWJhMWIwYzIxNmY1NGU5ZmMzZjE4ZTMzZDE2ZTI0ZDE1NWJmNjM0YjBmOGViODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmYThhZmQ5YzUzZTQ4OTczM2Y1NGE3MzkxMmEwNTY4NmE0ZWZiNzYxZWU4ZDRlYmQwOTdkMWJlMTE0ZTQ2MDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d5ba8fb4edd14bfdaca9317c5add8be2",
+      "statement": "The biometric loop regression suite uses production authentication and privacy managers with mocked LocalAuthentication, SecureStore and screen-capture APIs; it checks concurrent authentication rejection, transient inactive without background, and actual background/resume unlocking.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/biometricLoopFix.test.ts",
+          "version": "repo-file-v1:sha256:e1acbb2c2c2dff73e900dab65c5b583de5f5c91afcc28d479a0adce0ff372d1e"
+        }
+      ]
+    },
+    {
+      "id": "claim_d1958461bd2b4516a64c62bf977bd1cd",
+      "statement": "Settings modal tests use react-test-renderer and mock native files, Sharing and DocumentPicker, so they do not demonstrate actual native sharing or provider restore behavior.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/SettingsModal.test.tsx#L1-L60",
+          "version": "repo-lines-v1:sha256:d767f9f3de2bda08a4d0d85139f4fdd56c9a76b316a96f007ef5a361d97d6262:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4Y2FjOTM1NjAwYzgwM2M1OGNkOWJiYzZmMDI2ZTljYjFiZmVjNGQ3NGZlZjJkZmZkNTQ3NzBiNjQ2ZWRkZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNGI2YjMwNGRlYTlhZWIyOTlhMDUzMDUxYzYzNjllMWRhZTQwZGY2NDRjODYzZjI2MGEyOTg1MmU2MTQwZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyY2UwZGE5Njc1NGRiZjRjYjA0MGJkZDUyNTc5YjNmODI5YTkxZDNlNzFhZDI2NjQ3N2IyMTQwZDAyZmFkMDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b584ed0b4b2b422ab869398f5961665f",
+      "statement": "The pet companion hook suite uses fake timers, mocked AsyncStorage, cache reset and timer restoration to check empty/warning state and transient copied feedback; biometricLoopFix also contains a real short timeout for startup unlock.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/biometricLoopFix.test.ts#L142-L161",
+          "version": "repo-lines-v1:sha256:3fefcb02a8b42405ffaec783b54c5c504bb7fb1e1690e4c200c8d1b1c882661b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjOWIwOTg2ZGE3NjQ4NjAxZmJiZTU3YjNjNTkzMWEyY2E5ZDQ5NDBiNzdmZTU0N2NmODM5NDExMjc4YWU2ZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjM2JlYTFiNmE3ZGNhZTVmNDdlMGE5NzNhN2ViYzJiNWMwY2Q5M2RjY2IyNGUyZTIyNjJkMDU3MjBlYzA5OGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjMWUwNjFiYzM0YWZlNTNjZmNjNmZmNzc4ZDEwYmQ3NGY1YTFjM2RiZDAzYmExNzlmMzhhY2IwZDA4NWUyOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ4MTdmYmI3M2M5MmIzNmQ1ZTQ4OTZmZjUxYzFiNThlZWMzMzBiYmU5NjFiYTA1ZmM2MjA1Zjg2N2VhMWJjZjYifQ"
+        },
+        {
+          "resource": "repo://__tests__/unit/usePetCompanion.test.tsx",
+          "version": "repo-file-v1:sha256:a985046bc987455c94a20e15b962432f746e8bdd3db35c57f04d58869f673fb6"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea62cc44399c4aec9ac21b6e76f82fd5",
+      "statement": "Under NODE_ENV test, i18n starts from TEST_LOCALE or DEFAULT_LANGUAGE and skips saved-language startup synchronization; the home screen skips the language-initialized welcome check.",
+      "evidence": [
+        {
+          "resource": "repo://src/app/index.tsx#L89-L105",
+          "version": "repo-lines-v1:sha256:6362752a93a66487ec0d34f4edb78850643935950e2ce9abf75c4b5a4783f806:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1M2Q4NzgxNTI0MzhhYWJmZDVmMTM5ZjVkNjhkYzI2NWU2YzA0NzM1Yjc1NGQ5NGU4YWMyODE0YTcyMTU5OTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYzUyZjA4YjM5YjA4YjAxYzhkMzA4YmY4ODBiMGJlZjAyZmQxZGZjYzlkOWFhOTNhNGQxYjVmNGQ1OGI2Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhYjRmMDFkZDRlNDczNzg5MmMyN2UyN2E3OTVhOGEwMjcwNGE4NDE3ZDg1YWU0OWE2NGZlOGM4ZGU5MDIxMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEwZTNhNGUzNzBiZGYxZGI2YTczOWNjOTBkMzc5MTZhZGRlYzFkMmI0ZmJlMDk1ZTc4YzRjMGI3MTFmYjdlOWQifQ"
+        },
+        {
+          "resource": "repo://src/services/i18n/index.ts#L109-L137",
+          "version": "repo-lines-v1:sha256:07e631894d6ace62e781b113f3660eabeb52e013eee1586fdd8e236b76c041ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1Yjk5ZDI2ODcyMDE1ODQ2NjA4NzE2MjI0NjU0NzUwZDAyODNhNGY5MGE0MjU4NjY5YjczNjIwMWI5NGRhMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiNTgwZTk2NGY4M2E0NzNmNDNkNDQzODQ2Mjk0OWQ2OGI1NjAwZmRhNzg3ZjE2Mzc0NWQwMGRlODljYmYzNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7ac2253c02b14e079c59dc9fd5c8e43a",
+      "statement": "NetworkBlocker disables local-resource exemptions in tests, whereas outside tests it recognizes file, blob, data, assets-library, ph schemes and slash-prefixed paths.",
+      "evidence": [
+        {
+          "resource": "repo://src/services/network/networkBlocker.ts#L28-L57",
+          "version": "repo-lines-v1:sha256:c929518dd9b607b2009a4d68e3e234fa04e52e99c19e5dfcc782b6df093d817d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0ZDg3OTU2ZjNlYjcyMTQ1ZTQ4OTZjNTU3YjE0NDUzYzc5NGZjYmU3YjhhYjA1ZWU5NTZmYzM1N2Q3MzQ0ZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5ZGM4MDczMGRkMDZlZDdkNTMyNmJhYTI4ZTRhYjcxYmI2MzFhZmQxYmU0NWRiOWE2OWJkNWI4NWE5ZjFkNDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWI3NDkzZjNiNzExYTExZDkwMGMxMGNmZmQzMDZhNjY4NDhmNDRjODAzZDJiY2RiMmNmZWVkYjYzMzU3Y2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1NjQ2YTc5ODlkNGE4MDgxYmNkYzgwNTM1NTBkNmQ3NWMwY2ZiMmUyOTJiN2QwMTNlMzdiMTE5YmM5YmFjNzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8362ff71019a4eacb01cbbcaa170eecd",
+      "statement": "The ingestion unit suite covers clipboard URI/Base32 detection, invalid input, repeated-prompt suppression, AppState activation, and manual normalization/validation, making it a focused companion to ingestion changes.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/ingestion.test.ts",
+          "version": "repo-file-v1:sha256:1ee02fbbacba4784d3a211220a3dbc3e520038a46e88b94e885aa8e629566910"
+        }
+      ]
+    },
+    {
+      "id": "claim_16adb29d49684ea0b01c9251f365c917",
+      "statement": "The i18n unit suite uses mocked AsyncStorage and explicit language reset, testing supported languages and language preference behavior rather than native startup hydration.",
+      "evidence": [
+        {
+          "resource": "repo://__tests__/unit/i18n.test.ts",
+          "version": "repo-file-v1:sha256:c8935faef4f3937c1384391120f71104684517edc31b2e8699c553b3e944b8f9"
+        },
+        {
+          "resource": "repo://src/services/i18n/index.ts#L109-L137",
+          "version": "repo-lines-v1:sha256:07e631894d6ace62e781b113f3660eabeb52e013eee1586fdd8e236b76c041ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1Yjk5ZDI2ODcyMDE1ODQ2NjA4NzE2MjI0NjU0NzUwZDAyODNhNGY5MGE0MjU4NjY5YjczNjIwMWI5NGRhMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiNTgwZTk2NGY4M2E0NzNmNDNkNDQzODQ2Mjk0OWQ2OGI1NjAwZmRhNzg3ZjE2Mzc0NWQwMGRlODljYmYzNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTI5ZTkxZTBmOTljM2U4MjVkZTY5YjQzNWZiNjQ4NGQxYjBhMWRmMmY0NjU2MWFiZjFhMjlmMDQxODhiODgifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-10T07:14:35.895Z"
+  }
+}
