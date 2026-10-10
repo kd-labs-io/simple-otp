@@ -1,6 +1,0 @@
-# Files
-
-- [Encrypted Vault and Account Data Lifecycle](encrypted-vault.md) - How the Master Vault Key protects vault.enc, how account mutations are serialized, and how persisted changes reach React state. Covers reset, corruption handling, and the limits of concurrency and recovery guarantees.
-- [Localized Experience and Pet Companion](localized-companion.md) - How language preferences, mascot feedback, dialogue selection, and Pet Academy connect to vault events and application lifecycle. Covers preference hydration, state precedence, timers, localization fallbacks, and safe content extension.
-- [Runtime architecture and the single-screen dashboard](runtime.md) - How Simple OTP starts, owns dashboard state, coordinates hooks and modals, and refreshes local encrypted account data. Covers shared TOTP timing, foreground resynchronization, search, restore callbacks, and legacy contract facades.
-- [Security boundaries and application lock lifecycle](security-boundaries.md) - Explains the JavaScript offline perimeter, privacy overlay, biometric lock lifecycle, screen-capture integration gaps, and conditional clipboard expiry. Distinguishes UI concealment from encrypted-vault access control and native enforcement.
